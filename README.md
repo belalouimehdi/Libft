@@ -6,7 +6,9 @@ en regardant les fonctions de ma ftlib, vous pouvez écouter les liens ci-dessou
 quelques conseilles :
 
  1 - avoir un bon casque.
+
  2 - avoir un bon casque.
+
  3 - avoir un bon casque.
 
  bonne écoute :
