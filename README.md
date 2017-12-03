@@ -3,6 +3,14 @@ libft
 
 en regardant les fonctions de ma ftlib, vous pouvez écouter les liens ci-dessous :
 
+quelques conseilles :
+
+ 1 - avoir un bon casque.
+ 2 - avoir un bon casque.
+ 3 - avoir un bon casque.
+
+ bonne écoute :
+ 
  - Bruce Springsteen: STOLEN CAR <https://www.youtube.com/watch?v=FPobte6iqSU>
  - Jimmy Sax: No man no cry <https://www.youtube.com/watch?v=89_KXT5ztTU>
  - Democratoz vs bekakchi: Sbart sbart <https://www.youtube.com/watch?v=LHDDzLWPML4>
