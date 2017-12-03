@@ -6,16 +6,16 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/23 18:48:33 by mbelalou          #+#    #+#             */
-/*   Updated: 2017/11/29 15:37:06 by mbelalou         ###   ########.fr       */
+/*   Updated: 2017/12/01 19:39:37 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_comptword(const char *str, const char c)
+size_t	ft_comptword(const char *str, const char c)
 {
-	int		i;
-	int		nbrmot;
+	size_t	i;
+	size_t	nbrmot;
 
 	nbrmot = 0;
 	if (str == NULL)

@@ -6,13 +6,13 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 19:52:45 by mbelalou          #+#    #+#             */
-/*   Updated: 2017/11/27 10:19:25 by mbelalou         ###   ########.fr       */
+/*   Updated: 2017/12/04 00:19:26 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		extraire_nbt(unsigned char *str, unsigned long long nbr)
+static int		extract_nbr(unsigned char *str, unsigned long long nbr)
 {
 	int				pt;
 	int				bool_valide;
@@ -62,6 +62,6 @@ int				ft_atoi(const char *str)
 		else
 			return (0);
 	}
-	nbr = extraire_nbt(&str_t[++pt], nbr);
+	nbr = extract_nbr(&str_t[++pt], nbr);
 	return ((int)(nbr * signe));
 }

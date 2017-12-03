@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 19:56:46 by mbelalou          #+#    #+#             */
-/*   Updated: 2017/11/25 11:18:50 by mbelalou         ###   ########.fr       */
+/*   Updated: 2017/12/01 14:48:53 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,7 @@ void	ft_putstr(const char *str)
 
 	i = 0;
 	if (str == NULL)
-		ft_putstr("NULL");
+		write(1, "NULL", 4);
 	else
-	{
-		while (str[i])
-			ft_putchar((unsigned char)str[i++]);
-	}
+		write(1, str, ft_strlen(str));
 }

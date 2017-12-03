@@ -6,7 +6,7 @@
 #    By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 21:48:22 by mbelalou          #+#    #+#              #
-#    Updated: 2017/11/30 19:17:09 by mbelalou         ###   ########.fr        #
+#    Updated: 2017/12/04 00:05:34 by mbelalou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -87,93 +87,27 @@ SRCS	=	ft_memset.c\
 			ft_putmat.c\
 			ft_matlen.c\
 			ft_abs.c\
+			ft_getlenword.c\
+			ft_getfirstindexword.c\
 
-
-BIN		=	ft_abs.o\
-			ft_atoi.o\
-			ft_bzero.o\
-			ft_chartoint.o\
-			ft_comptword.o\
-			ft_getword.o\
-			ft_intochar.o\
-			ft_isalnum.o\
-			ft_isalpha.o\
-			ft_isascii.o\
-			ft_isblank.o\
-			ft_isdigit.o\
-			ft_isempty.o\
-			ft_islower.o\
-			ft_isprint.o\
-			ft_isupper.o\
-			ft_itoa.o\
-			ft_lstadd.o\
-			ft_lstdel.o\
-			ft_lstdelone.o\
-			ft_lstiter.o\
-			ft_lstmap.o\
-			ft_lstnew.o\
-			ft_matlen.o\
-			ft_max.o\
-			ft_memalloc.o\
-			ft_memccpy.o\
-			ft_memchr.o\
-			ft_memcmp.o\
-			ft_memcpy.o\
-			ft_memdel.o\
-			ft_memmove.o\
-			ft_memset.o\
-			ft_min.o\
-			ft_nbrlen.o\
-			ft_putchar.o\
-			ft_putchar_fd.o\
-			ft_putendl.o\
-			ft_putendl_fd.o\
-			ft_putmat.o\
-			ft_putnbr.o\
-			ft_putnbr_fd.o\
-			ft_putstr.o\
-			ft_putstr_fd.o\
-			ft_strcat.o\
-			ft_strchr.o\
-			ft_strclr.o\
-			ft_strcmp.o\
-			ft_strcpy.o\
-			ft_strcut.o\
-			ft_strdel.o\
-			ft_strdup.o\
-			ft_strequ.o\
-			ft_striter.o\
-			ft_striteri.o\
-			ft_strjoin.o\
-			ft_strlcat.o\
-			ft_strlen.o\
-			ft_strmap.o\
-			ft_strmapi.o\
-			ft_strncat.o\
-			ft_strncmp.o\
-			ft_strncpy.o\
-			ft_strnequ.o\
-			ft_strnew.o\
-			ft_strnstr.o\
-			ft_strrchr.o\
-			ft_strsplit.o\
-			ft_strstr.o\
-			ft_strsub.o\
-			ft_strtrim.o\
-			ft_tolower.o\
-			ft_toupper.o\
+BIN		=	$(SRCS:.c=.o)
 
 all		:	$(NAME)
 
 $(NAME)	:	$(BIN) libft.h
-			gcc $(FLAGES) $(SRCS) -I.
-			ar rc $(NAME) $(BIN)
-			ranlib $(NAME) 
+			@gcc $(FLAGES) $(SRCS) -I.
+			@ar rc $(NAME) $(BIN)
+			@ranlib $(NAME) 
 
 clean	:
-			rm -fr $(BIN)
+			@rm -fr $(BIN)
+			@echo cleaned all the .o
 
 fclean	:	clean
-			rm -f $(NAME)
+			@rm -f $(NAME)
+			@echo cleaned the .a file.
+			@echo the directory is totaly cleaned
 
 re		:	fclean all
+
+.phony	:	all clean fclean re 

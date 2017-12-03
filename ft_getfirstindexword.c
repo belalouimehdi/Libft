@@ -1,26 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memlloc.c                                       :+:      :+:    :+:   */
+/*   ft_getfirstindexword.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/16 05:06:16 by mbelalou          #+#    #+#             */
-/*   Updated: 2017/12/01 13:22:01 by mbelalou         ###   ########.fr       */
+/*   Created: 2017/12/01 17:51:55 by mbelalou          #+#    #+#             */
+/*   Updated: 2017/12/01 19:47:31 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+size_t	ft_getfirstindexword(const char *str, const int idword, const char c)
 {
-	char	*result;
+	size_t	pt;
+	size_t	cp;
+	size_t	strlen;
 
-	if (size > 2147483647)
-		return (NULL);
-	result = (void *)malloc((size + 1) * sizeof(*result));
-	if (result == NULL)
-		return (NULL);
-	ft_memset(result, '\0', size + 1);
-	return ((void *)result);
+	strlen = ft_strlen(str);
+	pt = 0;
+	cp = 0;
+	if (str == NULL)
+		return (-1);
+	while (str[pt] && (int)cp <= idword)
+	{
+		while (str[pt] == c)
+			++pt;
+		if (str[pt])
+			cp++;
+		while ((int)cp <= idword && str[pt] && str[pt] != c)
+			++pt;
+	}
+	return ((idword > (int)cp) ? -1 : pt);
 }

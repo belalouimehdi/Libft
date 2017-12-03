@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 17:52:06 by mbelalou          #+#    #+#             */
-/*   Updated: 2017/11/30 18:00:32 by mbelalou         ###   ########.fr       */
+/*   Updated: 2017/12/01 20:07:43 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,13 +94,17 @@ int					ft_isempty(const char *str);
 char				ft_intochar(int nbr);
 int					ft_chartoint(char c);
 size_t				ft_nbrlen(int nb);
-int					ft_comptword(const char *str, const char c);
-char				*ft_getword(const char *str, const int index, const char c);
+size_t				ft_comptword(const char *str, const char c);
+char				*ft_getword(const char *s, const int idword, const char c);
 char				*ft_strcut(const char *src, const size_t d, const size_t f);
 int					ft_min(const int a, const int b);
 int					ft_max(const int a, const int b);
 void				ft_putmat(char **mat);
 size_t				ft_matlen(char **mat);
 int					ft_abs(const int nbr);
+size_t				ft_getfirstindexword(const char *str, const int idword,
+		const char c);
+size_t				ft_getlenword(const char *str, const int index,
+		const char c);
 
 #endif

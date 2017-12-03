@@ -6,37 +6,27 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/23 19:09:27 by mbelalou          #+#    #+#             */
-/*   Updated: 2017/11/30 17:25:00 by mbelalou         ###   ########.fr       */
+/*   Updated: 2017/12/01 20:04:36 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_getword(const char *str, const int index, const char c)
+char	*ft_getword(const char *str, const int idword, const char c)
 {
 	char	*result;
-	size_t	pt;
-	int		cp;
+	size_t	pt_w;
+	size_t	lenword;
 
-	pt = 0;
-	cp = 0;
-	result = ft_strnew(ft_strlen(str));
-	if (result == NULL || str == NULL)
+	if (!str || idword < 0)
+		return (NULL);
+	if ((int)(pt_w = ft_getfirstindexword(str, idword, c)) < 0)
+		return (NULL);
+	lenword = ft_getlenword(str, pt_w, c);
+	result = ft_strnew(lenword);
+	if (result == NULL)
 		return (0);
-	while (str[pt] && cp < index)
-	{
-		while (str[pt] == c)
-			pt++;
-		if (pt < ft_strlen(str))
-			cp++;
-		while (str[pt] != c)
-			pt++;
-	}
-	while (str[pt] == c)
-		pt++;
-	cp = 0;
-	while (str[pt] != c)
-		result[cp++] = str[pt++];
-	result[cp++] = '\0';
+	result = ft_strcut(str, pt_w, (pt_w + lenword));
+	result[lenword++] = '\0';
 	return (result);
 }
