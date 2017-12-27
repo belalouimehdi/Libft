@@ -102,7 +102,7 @@ int					ft_max(const int a, const int b);
 void				ft_putmat(char **mat);
 size_t				ft_matlen(char **mat);
 int					ft_abs(const int nbr);
-size_t				ft_getfirstindexword(const char *str, const int idword,
+int				ft_getfirstindexword(const char *str, const int idword,
 		const char c);
 size_t				ft_getlenword(const char *str, const int index,
 		const char c);

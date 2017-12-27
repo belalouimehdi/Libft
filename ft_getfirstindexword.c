@@ -12,25 +12,23 @@
 
 #include "libft.h"
 
-size_t	ft_getfirstindexword(const char *str, const int idword, const char c)
+int	ft_getfirstindexword(const char *str, const int idword, const char c)
 {
-	size_t	pt;
-	size_t	cp;
-	size_t	strlen;
+	int	pt;
+	int	cp;
 
-	strlen = ft_strlen(str);
 	pt = 0;
 	cp = 0;
 	if (str == NULL)
 		return (-1);
-	while (str[pt] && (int)cp <= idword)
+	while (str[pt] && cp <= idword)
 	{
 		while (str[pt] == c)
 			++pt;
 		if (str[pt])
 			cp++;
-		while ((int)cp <= idword && str[pt] && str[pt] != c)
+		while (cp <= idword && str[pt] && str[pt] != c)
 			++pt;
 	}
-	return ((idword > (int)cp) ? -1 : pt);
+	return ((idword > cp) ? -1 : pt);
 }

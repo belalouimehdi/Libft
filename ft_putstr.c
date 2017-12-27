@@ -14,9 +14,6 @@
 
 void	ft_putstr(const char *str)
 {
-	int i;
-
-	i = 0;
 	if (str == NULL)
 		write(1, "NULL", 4);
 	else

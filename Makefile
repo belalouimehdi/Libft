@@ -94,7 +94,7 @@ BIN		=	$(SRCS:.c=.o)
 
 all		:	$(NAME)
 
-$(NAME)	:	$(BIN) libft.h
+$(NAME)	:	$(SRCS) libft.h
 			@gcc $(FLAGES) $(SRCS) -I.
 			@ar rc $(NAME) $(BIN)
 			@ranlib $(NAME) 
