@@ -16,20 +16,18 @@ char	*ft_strstr(const char *h, const char *ne)
 {
 	int		pt1;
 	int		pt2;
-	char	*result;
 
 	pt1 = 0;
-	result = NULL;
 	if (!ft_strlen(ne))
 		return ((char *)h);
 	while (h[pt1])
 	{
 		pt2 = 0;
-		while ((h[pt1 + pt2] == ne[pt2]) && (h[pt1 + pt2]) && ne[pt2])
+		while ((h[pt1 + pt2]) && ne[pt2] && (h[pt1 + pt2] == ne[pt2]))
 			pt2++;
 		if (!ne[pt2])
 			return ((char *)&h[pt1]);
 		pt1++;
 	}
-	return ((char *)result);
+	return (NULL);
 }
