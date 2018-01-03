@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 08:42:04 by mbelalou          #+#    #+#             */
-/*   Updated: 2017/11/30 15:50:26 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/01/03 16:59:46 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,9 +61,7 @@ static char		*ft_negatif(char *temp_tab, int nb, int len)
 		return (NULL);
 	temp_tab[0] = '-';
 	if (nb == (-2147483648))
-	{
 		min_nb(temp_tab);
-	}
 	else
 	{
 		nb = -nb;
@@ -77,6 +75,12 @@ char			*ft_itoa(int nb)
 	char	*temp_tab;
 	size_t	len;
 
+	if (nb == 0)
+	{
+		temp_tab = ft_strnew(1);
+		*temp_tab = '0';
+		return (temp_tab);
+	}
 	temp_tab = NULL;
 	len = ft_nbrlen(nb);
 	if (nb >= 0)

@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 17:52:06 by mbelalou          #+#    #+#             */
-/*   Updated: 2017/12/01 20:07:43 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/01/03 16:05:15 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ int					ft_isblank(char c);
 int					ft_isempty(const char *str);
 char				ft_intochar(int nbr);
 int					ft_chartoint(char c);
-size_t				ft_nbrlen(int nb);
+size_t				ft_nbrlen(long long nb);
 size_t				ft_comptword(const char *str, const char c);
 char				*ft_getword(const char *s, const int idword, const char c);
 char				*ft_strcut(const char *src, const size_t d, const size_t f);
@@ -102,9 +102,11 @@ int					ft_max(const int a, const int b);
 void				ft_putmat(char **mat);
 size_t				ft_matlen(char **mat);
 int					ft_abs(const int nbr);
-int				ft_getfirstindexword(const char *str, const int idword,
+int					ft_getfirstindexword(const char *str, const int idword,
 		const char c);
 size_t				ft_getlenword(const char *str, const int index,
 		const char c);
 
+void				ft_free_map(char ***map);
+int					ft_open_file(char *url_file);
 #endif

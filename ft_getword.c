@@ -23,9 +23,6 @@ char	*ft_getword(const char *str, const int idword, const char c)
 	if ((int)(pt_w = ft_getfirstindexword(str, idword, c)) < 0)
 		return (NULL);
 	lenword = ft_getlenword(str, pt_w, c);
-	result = ft_strnew(lenword);
-	if (result == NULL)
-		return (0);
 	result = ft_strcut(str, pt_w, (pt_w + lenword));
 	result[lenword++] = '\0';
 	return (result);

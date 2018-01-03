@@ -6,25 +6,22 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 12:45:13 by mbelalou          #+#    #+#             */
-/*   Updated: 2017/12/01 20:13:09 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/01/03 16:54:22 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_strsplit(const char *temp, char c)
+char	**ft_strsplit(const char *str, char c)
 {
 	size_t	dim;
 	char	**resultat;
-	char	*str;
 	int		id_mot;
 
-	if (temp == NULL)
+	if (str == NULL || !c)
 		return (NULL);
-	str = (char *)temp;
 	dim = ft_comptword(str, c);
-	resultat = (char **)malloc(sizeof(*resultat) * (dim + 1));
-	if (resultat == NULL)
+	if (!(resultat = (char **)malloc(sizeof(resultat) * (dim + 1))))
 		return (NULL);
 	id_mot = 0;
 	while (id_mot < (int)dim)

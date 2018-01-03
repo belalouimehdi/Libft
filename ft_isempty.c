@@ -14,16 +14,7 @@
 
 int		ft_isempty(const char *str)
 {
-	size_t	pt;
-	int		result;
-
-	result = 1;
-	pt = 0;
-	while (str[pt])
-	{
-		if (ft_isprint(str[pt]) && str[pt] != ' ')
-			result = 0;
-		pt++;
-	}
-	return (result);
+	if (*str)
+		return (0);
+	return (1);
 }

@@ -31,9 +31,7 @@ static void	ecrire_nb(int nb)
 void		ft_putnbr(int nb)
 {
 	if (nb >= 0)
-	{
 		ecrire_nb(nb);
-	}
 	else
 	{
 		ft_putchar('-');

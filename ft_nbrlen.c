@@ -6,29 +6,17 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 08:47:27 by mbelalou          #+#    #+#             */
-/*   Updated: 2017/11/30 20:57:43 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/01/03 15:56:41 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_nbrlen(int nb)
+size_t		ft_nbrlen(long long nb)
 {
-	size_t cp;
-
 	if (nb == 0)
-		return (1);
+		return (0);
 	if (nb < 0)
 		nb = nb * (-1);
-	if (nb == -2147483648)
-		return (10);
-	if (nb > 2147483647)
-		return (0);
-	cp = 0;
-	while (nb > 0)
-	{
-		cp++;
-		nb = (nb / 10);
-	}
-	return (cp);
+	return (1 + ft_nbrlen(nb / 10));
 }

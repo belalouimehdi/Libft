@@ -17,9 +17,8 @@ size_t	ft_matlen(char **mat)
 	size_t length;
 
 	length = 0;
-	if (mat == NULL)
-		return (length);
-	while (*mat++)
-		length++;
+	if (mat)
+		while (*mat++)
+			length++;
 	return (length);
 }

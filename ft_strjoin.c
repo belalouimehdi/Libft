@@ -14,15 +14,11 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int		ln_s1;
-	int		ln_s2;
 	char	*result;
 
 	if (s1 && s2)
 	{
-		ln_s1 = ft_strlen(s1);
-		ln_s2 = ft_strlen(s2);
-		result = (char *)ft_strnew(ln_s1 + ln_s2);
+		result = ft_strnew(ft_strlen(s1) + ft_strlen(s2));
 		if (result == NULL)
 			return (NULL);
 		ft_strcat(result, s1);

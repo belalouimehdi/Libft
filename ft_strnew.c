@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/16 05:24:10 by mbelalou          #+#    #+#             */
-/*   Updated: 2017/12/01 13:21:01 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/01/03 17:02:33 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 char	*ft_strnew(size_t size)
 {
-	return ((char *)ft_memalloc(size));
+	return (ft_memalloc(size));
 }

@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_free_map.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/17 01:53:25 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/01/03 19:40:33 by mbelalou         ###   ########.fr       */
+/*   Created: 2018/01/03 16:05:31 by mbelalou          #+#    #+#             */
+/*   Updated: 2018/01/03 16:06:14 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memdel(void **ap)
+void	ft_free_map(char ***map)
 {
-	if (ap && *ap)
+	int i;
+
+	i = 0;
+	while ((*map)[i])
 	{
-		free(*ap);
-		*ap = NULL;
+		ft_strdel(&(*map)[i]);
+		i++;
 	}
+	free(*map);
 }

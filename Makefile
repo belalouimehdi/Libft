@@ -6,7 +6,7 @@
 #    By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 21:48:22 by mbelalou          #+#    #+#              #
-#    Updated: 2017/12/04 00:36:47 by mbelalou         ###   ########.fr        #
+#    Updated: 2018/01/03 16:04:11 by mbelalou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -89,6 +89,8 @@ SRCS	=	ft_memset.c\
 			ft_abs.c\
 			ft_getlenword.c\
 			ft_getfirstindexword.c\
+			ft_free_map.c\
+			ft_open_file.c\
 
 BIN		=	$(SRCS:.c=.o)
 
@@ -110,5 +112,3 @@ fclean	:	clean
 			@echo the directory is totaly cleaned
 
 re		:	fclean all
-
-.phony	:	all clean fclean re 

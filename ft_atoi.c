@@ -22,9 +22,7 @@ static int		extract_nbr(unsigned char *str, unsigned long long nbr)
 	while (str[pt] != '\0')
 	{
 		if (ft_isdigit(str[pt]))
-		{
-			nbr = str[pt] - 48 + (nbr * 10);
-		}
+			nbr = str[pt] - '0' + (nbr * 10);
 		else
 		{
 			if (bool_valide)
@@ -48,7 +46,7 @@ int				ft_atoi(const char *str)
 	pt = 0;
 	nbr = 0;
 	signe = 1;
-	while ((str_t[pt] != '\0') && (str_t[pt] < 33) && (str_t[pt] != '\e'))
+	while (str_t[pt] && (str_t[pt] < 33) && (str_t[pt] != '\e'))
 		pt++;
 	if ((str_t[pt] == '-') || (str_t[pt] == '+'))
 	{
@@ -58,7 +56,7 @@ int				ft_atoi(const char *str)
 	else
 	{
 		if (ft_isdigit(str_t[pt]))
-			nbr = str_t[pt] - 48 + (nbr * 10);
+			nbr = str_t[pt] - '0' + (nbr * 10);
 		else
 			return (0);
 	}

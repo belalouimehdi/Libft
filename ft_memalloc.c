@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/16 05:06:16 by mbelalou          #+#    #+#             */
-/*   Updated: 2017/12/01 13:22:01 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/01/03 19:30:58 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	*ft_memalloc(size_t size)
 	if (size > 2147483647)
 		return (NULL);
 	result = (void *)malloc((size + 1) * sizeof(*result));
-	if (result == NULL)
+	if (!result)
 		return (NULL);
-	ft_memset(result, '\0', size + 1);
+	ft_bzero(result, size + 1);
 	return ((void *)result);
 }
