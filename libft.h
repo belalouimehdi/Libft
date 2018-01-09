@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 17:52:06 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/01/03 16:05:15 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/01/07 10:40:24 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,4 +109,6 @@ size_t				ft_getlenword(const char *str, const int index,
 
 void				ft_free_map(char ***map);
 int					ft_open_file(char *url_file);
+
+int					ft_is_c_in_str(char c, char *str);
 #endif

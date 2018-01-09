@@ -6,7 +6,7 @@
 #    By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 21:48:22 by mbelalou          #+#    #+#              #
-#    Updated: 2018/01/03 16:04:11 by mbelalou         ###   ########.fr        #
+#    Updated: 2018/01/07 10:37:35 by mbelalou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -91,6 +91,7 @@ SRCS	=	ft_memset.c\
 			ft_getfirstindexword.c\
 			ft_free_map.c\
 			ft_open_file.c\
+			ft_is_c_in_str.c\
 
 BIN		=	$(SRCS:.c=.o)
 
@@ -100,7 +101,7 @@ $(NAME)	:	$(SRCS) libft.h
 			@gcc $(FLAGES) $(SRCS) -I.
 			@ar rc $(NAME) $(BIN)
 			@ranlib $(NAME) 
-			@echo compilation complited successfully !
+			echo compilation complited successfully !
 
 clean	:
 			@rm -fr $(BIN)
