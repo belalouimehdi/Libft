@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 17:52:06 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/01/07 10:40:24 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/01/19 12:52:50 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,12 @@ char				*ft_strstr(const char *ha, const char *ne);
 char				*ft_strnstr(const char *ha, const char *ne, size_t n);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
+
 int					ft_atoi(const char *str);
+int					ft_atoi_v2(const char *str);
+int					ft_atoi_base(const char *str, int str_base);
+int					ft_atoi_base_v2(const char *str, int str_base);
+
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
 int					ft_isalnum(int c);
@@ -67,10 +72,15 @@ char				*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 int					ft_strequ(const char *s1, const char *s2);
 int					ft_strnequ(const char *s1, const char *s2, size_t n);
 char				*ft_strsub(const char *s, unsigned int start, size_t len);
+
 char				*ft_strjoin(const char *s1, const char *s2);
+
 char				*ft_strtrim(const char *s);
 char				**ft_strsplit(const char *str, char c);
 char				*ft_itoa(int nbr);
+char				*ft_strlower(const char *str);
+char				*ft_strupper(const char *str);
+
 void				ft_putchar(char c);
 void				ft_putstr(const char *str);
 void				ft_putendl(const char *str);

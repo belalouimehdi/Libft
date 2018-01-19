@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_atoi_v2.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/17 10:38:22 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/01/18 12:04:41 by mbelalou         ###   ########.fr       */
+/*   Created: 2018/01/18 11:39:50 by mbelalou          #+#    #+#             */
+/*   Updated: 2018/01/18 16:31:14 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(const char *s, int fd)
+int				ft_atoi_v2(const char *str)
 {
-	if (!s)
-		return ;
-	write(fd, s, ft_strlen(s));
+	return (ft_atoi_base_v2(str, 10));
 }

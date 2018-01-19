@@ -1,20 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strupper.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/17 10:38:22 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/01/18 12:04:41 by mbelalou         ###   ########.fr       */
+/*   Created: 2018/01/18 12:40:50 by mbelalou          #+#    #+#             */
+/*   Updated: 2018/01/18 12:46:32 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(const char *s, int fd)
+char	*ft_strupper(const char *str)
 {
-	if (!s)
-		return ;
-	write(fd, s, ft_strlen(s));
+	char	*ret;
+	int		pt;
+
+	if (str == NULL)
+		return (NULL);
+	ret = (char *)str;
+	pt = 0;
+	while (ret[pt])
+	{
+		if (ft_islower(ret[pt]))
+			ret[pt] = ret[pt] - ('a' - 'A');
+		pt++;
+	}
+	return (ret);
 }
