@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 17:52:06 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/01/19 12:52:50 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/01/27 18:44:07 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,4 +121,7 @@ void				ft_free_map(char ***map);
 int					ft_open_file(char *url_file);
 
 int					ft_is_c_in_str(char c, char *str);
+
+void				ft_temporize(size_t sycl);
+
 #endif
