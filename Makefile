@@ -6,7 +6,7 @@
 #    By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 21:48:22 by mbelalou          #+#    #+#              #
-#    Updated: 2018/01/19 12:52:53 by mbelalou         ###   ########.fr        #
+#    Updated: 2018/01/29 17:25:55 by mbelalou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -97,6 +97,8 @@ SRCS	=	ft_memset.c\
 			ft_free_map.c\
 			ft_open_file.c\
 			ft_is_c_in_str.c\
+			ft_strnew_empty.c\
+			ft_temporize.c\
 
 BIN		=	$(SRCS:.c=.o)
 
