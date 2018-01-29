@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 17:52:06 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/01/27 18:44:07 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/01/29 17:17:13 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,5 +123,7 @@ int					ft_open_file(char *url_file);
 int					ft_is_c_in_str(char c, char *str);
 
 void				ft_temporize(size_t sycl);
+
+char				*ft_strnew_empty(size_t size);
 
 #endif

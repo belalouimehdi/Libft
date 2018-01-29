@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/27 18:40:47 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/01/27 18:47:18 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/01/29 15:45:25 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_temporize(size_t sycl)
 {
-	int cp;
-	int i;
+	size_t cp;
+	size_t i;
 
 	cp = 0;
 	while (cp < sycl)
