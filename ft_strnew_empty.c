@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/27 18:47:50 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/01/29 17:18:10 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/01/29 22:13:26 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ char	*ft_strnew_empty(size_t size)
 	result = (char *)malloc((size + 1) * sizeof(*result));
 	if (!result)
 		return (NULL);
-	ft_memset(result, ' ', size + 1);
+	ft_memset(result, ' ', size);
+	result[size + 1] = '\0';
 	return (result);
 }
