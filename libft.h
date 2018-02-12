@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 17:52:06 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/01/29 19:01:17 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/02/12 15:42:08 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,34 @@
 # include <sys/stat.h>
 # include <fcntl.h>
 # include <unistd.h>
+# include <wchar.h>
+
+# define DONT_CLEAN	0
+# define CLEAN_FIRST	1
+# define CLEAN_LAST	2
+# define CLEAN_BOTH	3
+
+# define WHITE		"\x1B[0m"
+# define RED			"\x1B[31m"
+# define GREEN		"\x1B[32m"
+# define YELLOW		"\x1B[33m"
+# define BLUE		"\x1B[34m"
+# define MAGENTA		"\x1B[35m"
+# define CYAN		"\x1B[36m"
+
+# define MAX_INT		2147483647
+# define MIN_INT		-2147483648
+
+# define SIZE_BUF_SHOW	80
+# define SIZE_BUF		80
+# define EOL				0
+# define PUT_CHAR		1
+# define RESET			-1
+# define ING				2
+
+# define DECIMAL			10
+# define EXA				16
+# define OCTAL			8
 
 typedef struct		s_list
 {
@@ -25,6 +53,13 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+typedef struct		s_show
+{
+	char			buf[SIZE_BUF_SHOW + 1];
+	int				pt;
+	int				cp;
+}					t_show;
 
 void				*ft_memset(void *str, int c, size_t n);
 void				ft_bzero(void *s, size_t n);
@@ -49,8 +84,8 @@ int					ft_strncmp(const char *s1, const char *s2, size_t n);
 
 int					ft_atoi(const char *str);
 int					ft_atoi_v2(const char *str);
-int					ft_atoi_base(const char *str, int str_base);
-int					ft_atoi_base_v2(const char *str, int str_base);
+long				ft_base_to_decimal(const char *str, int str_base);
+int					ft_base_to_decimal_v2(const char *str, int str_base);
 
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
@@ -74,6 +109,7 @@ int					ft_strnequ(const char *s1, const char *s2, size_t n);
 char				*ft_strsub(const char *s, unsigned int start, size_t len);
 
 char				*ft_strjoin(const char *s1, const char *s2);
+char				*ft_strjoin_clean(const char *s1, const char *s2, int opt);
 
 char				*ft_strtrim(const char *s);
 char				**ft_strsplit(const char *str, char c);
@@ -81,8 +117,10 @@ char				*ft_itoa(int nbr);
 char				*ft_strlower(const char *str);
 char				*ft_strupper(const char *str);
 
+int					ft_put_buf(const char c, const int option);
 void				ft_putchar(char c);
 void				ft_putstr(const char *str);
+void				ft_putwstr(const wchar_t *str);
 void				ft_putendl(const char *str);
 void				ft_putnbr(int nb);
 void				ft_putchar_fd(char c, int fd);
@@ -125,4 +163,7 @@ int					ft_is_c_in_str(char c, char *str);
 char				*ft_strnew_empty(size_t size);
 void				ft_temporize(size_t sycl);
 
+int					ft_is_elem_base(const char c, const int base);
+int					ft_get_len_value_base(const int nbr, const int exit_base);
+int					ft_get_char_base(const char nbr);
 #endif

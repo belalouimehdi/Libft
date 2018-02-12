@@ -6,7 +6,7 @@
 #    By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 21:48:22 by mbelalou          #+#    #+#              #
-#    Updated: 2018/01/29 17:25:55 by mbelalou         ###   ########.fr        #
+#    Updated: 2018/02/12 12:34:02 by mbelalou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,9 +35,9 @@ SRCS	=	ft_memset.c\
 			ft_strcmp.c\
 			ft_strncmp.c\
 			ft_atoi.c\
-			ft_atoi_base.c\
+			ft_base_to_decimal.c\
 			ft_atoi_v2.c\
-			ft_atoi_base_v2.c\
+			ft_base_to_decimal_v2.c\
 			ft_isalpha.c\
 			ft_isdigit.c\
 			ft_isalnum.c\
@@ -99,6 +99,8 @@ SRCS	=	ft_memset.c\
 			ft_is_c_in_str.c\
 			ft_strnew_empty.c\
 			ft_temporize.c\
+			ft_get_char_base.c\
+			ft_is_elem_base.c\
 
 BIN		=	$(SRCS:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 19:52:45 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/01/19 12:39:50 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/02/12 15:51:27 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,16 @@
 int		ft_atoi(const char *str)
 {
 	char	*s;
+	int		signe;
 
 	s = (char *)str;
 	while (*s && ((*s < 33 && *s != 27) && *s != '\200'))
 		s++;
-	return ((*s) ? ft_atoi_base(s, 10) : 0);
+	signe = 1;
+	if (*s == '-' || *s == '+')
+	{
+		signe = (*s == '-') ? -1 : 1;
+		s++;
+	}
+	return ((*s) ? signe * ft_base_to_decimal(s, DECIMAL) : 0);
 }

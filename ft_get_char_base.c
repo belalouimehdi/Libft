@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memlloc.c                                       :+:      :+:    :+:   */
+/*   ft_get_char_base.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/16 05:06:16 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/02/12 09:47:10 by mbelalou         ###   ########.fr       */
+/*   Created: 2018/02/12 10:18:59 by mbelalou          #+#    #+#             */
+/*   Updated: 2018/02/12 15:25:09 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+int		ft_get_char_base(const char nbr)
 {
-	char	*result;
+	char	*elem_base;
+	int		val;
 
-	if (size > 2147483647)
-		return (NULL);
-	result = (void *)malloc((size + 1) * sizeof(*result));
-	if (!result)
-		return (NULL);
-	ft_bzero(result, size + 1);
-	return ((void *)result);
+	val = 0;
+	elem_base = "0123456789abcdef";
+	while (val < 16)
+	{
+		if (elem_base[val] == nbr)
+			return (val);
+		val++;
+	}
+	return (val);
 }

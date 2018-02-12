@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memlloc.c                                       :+:      :+:    :+:   */
+/*   ft_get_len_value_base.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/16 05:06:16 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/02/12 09:47:10 by mbelalou         ###   ########.fr       */
+/*   Created: 2018/02/12 10:14:55 by mbelalou          #+#    #+#             */
+/*   Updated: 2018/02/12 10:17:51 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+int		ft_get_len_value_base(const int nbr, const int exit_base)
 {
-	char	*result;
+	int len;
+	int temp_nbr;
 
-	if (size > 2147483647)
-		return (NULL);
-	result = (void *)malloc((size + 1) * sizeof(*result));
-	if (!result)
-		return (NULL);
-	ft_bzero(result, size + 1);
-	return ((void *)result);
+	temp_nbr = nbr;
+	len = 1;
+	while (temp_nbr / exit_base)
+	{
+		temp_nbr = (temp_nbr / exit_base);
+		len++;
+	}
+	return (len);
 }

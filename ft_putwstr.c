@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memlloc.c                                       :+:      :+:    :+:   */
+/*   ft_putwstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/16 05:06:16 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/02/12 09:47:10 by mbelalou         ###   ########.fr       */
+/*   Created: 2018/02/11 14:23:52 by mbelalou          #+#    #+#             */
+/*   Updated: 2018/02/11 14:45:54 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+void	ft_putwstr(const wchar_t *str)
 {
-	char	*result;
-
-	if (size > 2147483647)
-		return (NULL);
-	result = (void *)malloc((size + 1) * sizeof(*result));
-	if (!result)
-		return (NULL);
-	ft_bzero(result, size + 1);
-	return ((void *)result);
+	(void)str;
 }

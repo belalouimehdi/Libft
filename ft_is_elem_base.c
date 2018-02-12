@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memlloc.c                                       :+:      :+:    :+:   */
+/*   ft_is_elem_base.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/16 05:06:16 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/02/12 09:47:10 by mbelalou         ###   ########.fr       */
+/*   Created: 2018/02/12 11:48:50 by mbelalou          #+#    #+#             */
+/*   Updated: 2018/02/12 15:47:12 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+int		ft_is_elem_base(const char c, const int base)
 {
-	char	*result;
+	int		pt;
+	char	*elem_base;
 
-	if (size > 2147483647)
-		return (NULL);
-	result = (void *)malloc((size + 1) * sizeof(*result));
-	if (!result)
-		return (NULL);
-	ft_bzero(result, size + 1);
-	return ((void *)result);
+	elem_base = "0123456789abcdef";
+	pt = -1;
+	while (++pt < base)
+	{
+		if (elem_base[pt] == c)
+			return (1);
+	}
+	return (0);
 }
