@@ -6,16 +6,16 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/11 18:17:35 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/02/12 15:24:51 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/02/13 20:15:04 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int				ft_base_to_decimal_v2(const char *str, int str_base)
+size_t				ft_base_to_decimal_v2(const char *str, const int str_base)
 {
 	int		pt;
-	long	nbr_ret;
+	size_t	nbr_ret;
 	char	*temp;
 
 	if ((str_base <= 1 || str_base > 16) && (str == NULL))
@@ -26,7 +26,7 @@ int				ft_base_to_decimal_v2(const char *str, int str_base)
 	while (temp[++pt])
 	{
 		if (ft_isupper(str[pt]))
-			temp[pt] = temp[pt] + ('a' - 'A');
+			temp[pt] = ft_tolower(temp[pt]);
 		if (!ft_is_elem_base(temp[pt], str_base))
 			return (0);
 		nbr_ret = (nbr_ret * str_base) + ft_get_char_base(temp[pt]);

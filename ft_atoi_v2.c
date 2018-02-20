@@ -6,13 +6,13 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/18 11:39:50 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/02/12 11:48:10 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/02/15 19:14:17 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int				ft_atoi_v2(const char *str)
+long				ft_atoi_v2(const char *str)
 {
 	int		signe;
 
