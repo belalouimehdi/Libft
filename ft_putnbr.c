@@ -6,19 +6,19 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 19:56:34 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/02/11 17:52:42 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/03/12 18:14:33 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_putnbr(int nbr)
+void		ft_putnbr(intmax_t nbr)
 {
 	if (nbr < 0)
 	{
 		ft_putstr("-");
-		if (nbr == (-2147483648))
-			ft_putstr("2147483648");
+		if (nbr < MIN_INTMAX)
+			ft_putstr("9223372036854775808");
 		else
 			ft_putnbr(-nbr);
 	}

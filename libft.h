@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 17:52:06 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/03/12 17:50:49 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/03/12 18:15:25 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,35 +20,39 @@
 # include <unistd.h>
 # include <wchar.h>
 
-# define UPPER		1
-# define LOWER		0
+# define UPPER			 1
+# define LOWER			 0
 
-# define DONT_CLEAN	0
-# define CLEAN_FIRST	1
-# define CLEAN_LAST	2
-# define CLEAN_BOTH	3
+# define DONT_CLEAN		 0
+# define CLEAN_FIRST	 1
+# define CLEAN_LAST		 2
+# define CLEAN_BOTH		 3
 
-# define WHITE		"\x1B[0m"
+# define WHITE			"\x1B[0m"
 # define RED			"\x1B[31m"
-# define GREEN		"\x1B[32m"
-# define YELLOW		"\x1B[33m"
-# define BLUE		"\x1B[34m"
+# define GREEN			"\x1B[32m"
+# define YELLOW			"\x1B[33m"
+# define BLUE			"\x1B[34m"
 # define MAGENTA		"\x1B[35m"
-# define CYAN		"\x1B[36m"
+# define CYAN			"\x1B[36m"
 
-# define MAX_INT		2147483647
+# define MAX_INT		 2147483647
 # define MIN_INT		-2147483648
 
-# define SIZE_BUF_SHOW	80
-# define SIZE_BUF		80
-# define EOL			0
-# define PUT_CHAR		1
-# define RESET			-1
-# define ING			2
+# define MAX_INTMAX		 9223372036854775807
+# define MIN_INTMAX		-9223372036854775807
 
-# define DECIMAL		10
-# define EXA			16
-# define OCTAL			8
+# define SIZE_BUF_SHOW	 80
+# define SIZE_BUF		 80
+# define EOL			 0
+# define PUT_CHAR		 1
+# define RESET			-1
+# define ING			 2
+
+# define EXA			 16
+# define DEC			 10
+# define OCT			 8
+# define BIN			 2
 
 typedef struct		s_list
 {
@@ -67,8 +71,8 @@ typedef struct		s_show
 int					ft_abs(const int nbr);
 long				ft_atoi(const char *str);
 long				ft_atoi_v2(const char *str);
-size_t				ft_base_to_decimal(const char *str, const  int str_base);
-size_t				ft_base_to_decimal_v2(const char *str, const int str_base);
+intmax_t			ft_base_to_decimal(const char *str, const  int str_base);
+intmax_t			ft_base_to_decimal_v2(const char *str, const int str_base);
 
 char				*ft_decimal_to_base_dynm(const long nbr_in, int base,
 		int form);
@@ -125,7 +129,13 @@ void				ft_memdel(void **ap);
 void				*ft_memmove(void *dest, const void *src, size_t n);
 void				*ft_memset(void *str, int c, size_t n);
 int					ft_min(const int a, const int b);
-short				ft_nbrlen(long nbr);
+
+
+
+short				ft_nbrlen(intmax_t nbr);
+
+
+
 int					ft_open_file(char *url_file);
 int					ft_put_buf(const char c, const int option);
 void				ft_putchar(char c);
@@ -133,7 +143,13 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putendl(const char *str);
 void				ft_putendl_fd(const char *s, int fd);
 void				ft_putmat(char **mat);
-void				ft_putnbr(int nb);
+
+
+
+void				ft_putnbr(intmax_t nb);
+
+
+
 void				ft_putnbr_fd(int n, int fd);
 void				ft_putstr(const char *str);
 void				ft_putstr_fd(const char *s, int fd);

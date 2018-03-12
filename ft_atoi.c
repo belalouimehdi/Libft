@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 19:52:45 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/02/13 19:15:34 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/03/12 18:08:40 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ long	ft_atoi(const char *str)
 		signe = (*s == '-') ? -1 : 1;
 		s++;
 	}
-	return ((*s) ? (long)signe * ft_base_to_decimal(s, DECIMAL) : 0);
+	return ((*s) ? (long)signe * ft_base_to_decimal(s, DEC) : 0);
 }

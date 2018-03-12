@@ -6,17 +6,17 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/11 18:17:21 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/02/13 20:15:12 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/03/12 18:15:30 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t				ft_base_to_decimal(const char *str, const int str_base)
+intmax_t				ft_base_to_decimal(const char *str, const int str_base)
 {
-	int		pt;
-	size_t	nbr_ret;
-	char	*temp;
+	int			pt;
+	intmax_t	nbr_ret;
+	char		*temp;
 
 	if ((str_base <= 1 || str_base > 16) || (str == NULL) ||
 			(str[0] == '-') || str[0] == '+')

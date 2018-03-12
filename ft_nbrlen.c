@@ -6,13 +6,13 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 08:47:27 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/02/20 19:40:01 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/03/12 17:59:03 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-short		ft_nbrlen(long nbr)
+short		ft_nbrlen(intmax_t nbr)
 {
 	short ret;
 
