@@ -6,7 +6,7 @@
 #    By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 21:48:22 by mbelalou          #+#    #+#              #
-#    Updated: 2018/03/12 17:48:54 by mbelalou         ###   ########.fr        #
+#    Updated: 2018/03/12 17:49:32 by mbelalou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,6 @@ SRCS	=	ft_abs.c\
 			ft_getlenword.c\
 			ft_gettab_index.c\
 			ft_gettab_val.c\
-
 			ft_getword.c\
 			ft_intochar.c\
 			ft_is_c_in_str.c\
