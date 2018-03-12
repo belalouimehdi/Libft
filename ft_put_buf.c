@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/02 17:29:12 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/02/15 19:12:05 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/03/12 19:49:03 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static int		rest(t_show *show)
 {
 	(*show).cp = 0;
-	ft_bzero((*show).buf, SIZE_BUF);
+//	ft_bzero((*show).buf, SIZE_BUF);
 	(*show).pt = 0;
 	return (0);
 }

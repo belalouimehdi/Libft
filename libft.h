@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 17:52:06 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/03/12 18:15:25 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/03/12 19:51:35 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,17 +42,19 @@
 # define MAX_INTMAX		 9223372036854775807
 # define MIN_INTMAX		-9223372036854775807
 
-# define SIZE_BUF_SHOW	 80
-# define SIZE_BUF		 80
+# define SIZE_BUF_SHOW	 4096
+# define SIZE_BUF		 4096
 # define EOL			 0
 # define PUT_CHAR		 1
 # define RESET			-1
 # define ING			 2
 
-# define EXA			 16
-# define DEC			 10
-# define OCT			 8
 # define BIN			 2
+# define OCT			 8
+# define DEC			 10
+# define EXA			 16
+
+# define SIZE_TAB_CONV	 128
 
 typedef struct		s_list
 {
@@ -81,13 +83,7 @@ char				*ft_decimal_to_base_stat(char *tab_ret, const long nbr,
 				const int base, const int form);
 
 long				ft_gettab_index(const char *tab, const char c);
-
 char				ft_gettab_val(const char *tab, const int val);
-
-
-
-
-
 
 
 void				ft_bzero(void *s, size_t n);
