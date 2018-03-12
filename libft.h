@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 17:52:06 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/02/15 16:54:02 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/03/12 17:40:50 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,9 @@
 # include <fcntl.h>
 # include <unistd.h>
 # include <wchar.h>
+
+# define UPPER		1
+# define LOWER		0
 
 # define DONT_CLEAN	0
 # define CLEAN_FIRST	1
@@ -66,6 +69,20 @@ long				ft_atoi(const char *str);
 long				ft_atoi_v2(const char *str);
 size_t				ft_base_to_decimal(const char *str, const  int str_base);
 size_t				ft_base_to_decimal_v2(const char *str, const int str_base);
+
+char				*ft_decimal_to_base_dynm(const long nbr_in, int base,
+		int form);
+
+char				*ft_decimal_to_base_stat(char *tab_ret, const long nbr,
+				const int base, const int form);
+
+long				ft_gettab_index(const char *tab, const char c);
+
+char				ft_gettab_val(const char *tab, const int val);
+
+
+
+
 
 
 
