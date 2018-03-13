@@ -19,6 +19,7 @@
 # include <fcntl.h>
 # include <unistd.h>
 # include <wchar.h>
+# include <inttypes.h>
 
 # define UPPER			 1
 # define LOWER			 0
