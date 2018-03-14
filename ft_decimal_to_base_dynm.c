@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static char		*get_result(long nbr, int base, char *elem_base, int size)
+static char		*get_result(intmax_t nbr, int base, char *elem_base, int size)
 {
 	char *result;
 
@@ -25,14 +25,14 @@ static char		*get_result(long nbr, int base, char *elem_base, int size)
 	return (result);
 }
 
-char			*ft_decimal_to_base_dynm(const long nbr_in, int base, int form)
+char			*ft_decimal_to_base_dynm(const intmax_t nbr_in, int base, int form)
 {
 	char	*ret;
 	char	*elem_base;
 	int		size_nbr_ret;
-	long	nbr;
+	intmax_t	nbr;
 
-	nbr = (nbr_in > 0) ? nbr_in : -nbr_in;
+	nbr = (nbr_in < 0) ? -nbr_in : nbr_in;
 	if (base <= 1 || base > 16)
 		return (0);
 	elem_base = (form == LOWER) ? "0123456789abcdef" : "0123456789ABCDEF";

@@ -12,15 +12,17 @@
 
 #include "libft.h"
 
-char			*ft_decimal_to_base_stat(char *tab_ret, const long nbr,
+/*		voir si ont est obliger de renvoyer un tab				*/
+
+void			ft_decimal_to_base_stat(char *tab_ret, const intmax_t nbr,
 		const int base, const int form)
 {
 	int		len_ret;
 	char	*elem_base;
 	int		size_nbr_ret;
-	unsigned long	nbr_temp;
+	intmax_t	nbr_temp;
 
-	nbr_temp =  nbr;// : -nbr;
+	nbr_temp = (nbr < 0) ? -nbr : nbr;
 	if (base <= 1 || base > 16)
 		return (0);
 	elem_base = (form == LOWER) ? "0123456789abcdef" : "0123456789ABCDEF";
@@ -35,5 +37,4 @@ char			*ft_decimal_to_base_stat(char *tab_ret, const long nbr,
 		tab_ret[size_nbr_ret] = ft_gettab_val(elem_base, nbr_temp % base);
 		nbr_temp = nbr_temp / base;
 	}
-	return (tab_ret);
 }

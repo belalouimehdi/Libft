@@ -17,6 +17,9 @@ short		ft_nbrlen(intmax_t nbr)
 	short ret;
 
 	ret = 0;
+	//ft_putnbr(nbr);
+	if (nbr < MIN_INTMAX)
+		return (19);
 	if (nbr < 0)
 		nbr = -nbr;
 	while (nbr > 0)
@@ -24,5 +27,10 @@ short		ft_nbrlen(intmax_t nbr)
 		nbr = nbr / 10;
 		ret++;
 	}
+/*
+	ft_putstr("\n");
+	ft_putnbr(nbr);
+	ft_putstr("\n");
+*/
 	return (ret);
 }

@@ -44,7 +44,7 @@
 # define MIN_INTMAX		-9223372036854775807
 
 # define SIZE_BUF_SHOW	 4096
-# define SIZE_BUF		 4096
+# define SIZE_BUF		 65
 # define EOL			 0
 # define PUT_CHAR		 1
 # define RESET			-1
@@ -77,10 +77,10 @@ long				ft_atoi_v2(const char *str);
 intmax_t			ft_base_to_decimal(const char *str, const  int str_base);
 intmax_t			ft_base_to_decimal_v2(const char *str, const int str_base);
 
-char				*ft_decimal_to_base_dynm(const long nbr_in, int base,
+char				*ft_decimal_to_base_dynm(const intmax_t nbr_in, int base,
 		int form);
 
-char				*ft_decimal_to_base_stat(char *tab_ret, const long nbr,
+void				ft_decimal_to_base_stat(char *tab_ret, const intmax_t nbr,
 				const int base, const int form);
 
 long				ft_gettab_index(const char *tab, const char c);
@@ -92,7 +92,8 @@ int					ft_chartoint(char c);
 size_t				ft_comptword(const char *str, const char c);
 void				ft_free_map(char ***map);
 int					ft_get_char_base(const char nbr);
-int					ft_get_len_value_base(const int nbr, const int exit_base);
+int					ft_get_len_value_base(const intmax_t nbr,
+		const int exit_base);
 int					ft_getfirstindexword(const char *str, const int idword,	const char c);
 size_t				ft_getlenword(const char *str, const int index,	const char c);
 char				*ft_getword(const char *s, const int idword, const char c);

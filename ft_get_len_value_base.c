@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-int		ft_get_len_value_base(const int nbr, const int exit_base)
+int		ft_get_len_value_base(const intmax_t nbr, const int exit_base)
 {
 	int len;
-	int temp_nbr;
+	intmax_t temp_nbr;
 
 	temp_nbr = nbr;
 	len = 1;
