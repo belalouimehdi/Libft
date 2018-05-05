@@ -6,7 +6,7 @@
 #    By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 21:48:22 by mbelalou          #+#    #+#              #
-#    Updated: 2018/05/04 12:45:54 by mbelalou         ###   ########.fr        #
+#    Updated: 2018/05/05 20:01:21 by mbelalou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,16 @@ SRCS_CHAR	= $(addprefix $(DIR_CHAR)/, $(SRC_CHAR))
 DIR_FILE	= src/file/
 SRC_FILE	= ft_open_file.c get_next_line.c
 SRCS_FILE	= $(addprefix $(DIR_FILE)/, $(SRC_FILE))
+
+DIR_INTLIST	= src/intlist/
+SRC_INTLIST	= ft_add_bgn_int_list.c ft_is_in_int_list.c ft_add_end_int_list.c\
+			  ft_is_sorted_asc_int_list.c ft_avg_int_list.c\
+			  ft_is_sorted_des_int_list.c ft_clear_int_list.c ft_max_int_list.c\
+			  ft_dell_bgn_int_list.c ft_min_int_list.c ft_dell_end_int_list.c\
+			  ft_new_int_list.c ft_getnbr_found_elem_int_list.c\
+			  ft_put_int_list.c ft_getval_int_list.c ft_size_int_list.c\
+			  ft_is_empty_int_list.c
+SRCS_INTLIST= $(addprefix $(DIR_INTLIST)/, $(SRC_INTLIST))
 
 DIR_LST	= src/lst
 SRC_LST		= ft_lstadd.c ft_lstdel.c ft_lstdelone.c ft_lstiter.c ft_lstmap.c\
@@ -78,8 +88,8 @@ PRINTF_DIR	= src/printf
 
 PRINTF		= libftprintf.a
 
-SRC			= $(SRCS_CHAR) $(SRCS_FILE) $(SRCS_LST) $(SRCS_MAT) $(SRCS_MEM)\
-			  $(SRCS_NBR) $(SRCS_STR) $(SRCS_SYS) $(SRCS_WCHAR)
+SRC			= $(SRCS_CHAR) $(SRCS_FILE) $(SRCS_INTLIST) $(SRCS_LST) $(SRCS_MAT)\
+			  $(SRCS_MEM) $(SRCS_NBR) $(SRCS_STR) $(SRCS_SYS) $(SRCS_WCHAR)
 
 OBJ			= $(addprefix $(OBJS_DIR), $(SRC:.c=.o))
 
@@ -94,7 +104,8 @@ all				: $(PRINTF) $(NAME)
 $(NAME)			: $(SRC) $(OBJS_DIR) $(OBJ)
 		@ar rc $(NAME) $(OBJ)
 		@ranlib $(NAME)
-		@echo "$(GREEN)$(NAME) hase been successfully created !$(WHITE)."
+		@echo "$(GREEN)$(NAME) has been successfully created !$(WHITE)."
+		@say "librery has been successfully created !"
 
 $(PRINTF)		:
 		@make -C $(PRINTF_DIR)
@@ -107,6 +118,7 @@ $(OBJS_DIR)		:
 		@mkdir -p $(OBJS_DIR);
 		@mkdir -p $(OBJS_DIR)/$(DIR_CHAR);
 		@mkdir -p $(OBJS_DIR)/$(DIR_FILE);
+		@mkdir -p $(OBJS_DIR)/$(DIR_INTLIST);
 		@mkdir -p $(OBJS_DIR)/$(DIR_LST);
 		@mkdir -p $(OBJS_DIR)/$(DIR_MAT);
 		@mkdir -p $(OBJS_DIR)/$(DIR_MEM);
@@ -119,6 +131,7 @@ clean			:
 		@make -C $(PRINTF_DIR) clean
 		@rm -fr $(OBJS_DIR)
 		@echo "$(RED)cleaned the libft binary file$(WHITE)."
+		@say "cleaned the librery binary files."
 
 fclean			:
 		@make -C $(PRINTF_DIR) fclean
@@ -126,10 +139,11 @@ fclean			:
 		@rm -f $(NAME)
 		@echo "$(RED)cleaned the $(NAME) file$(WHITE)."
 		@echo "$(GREEN)the directory is totaly cleaned !!$(WHITE)."
+		@say "librery has been totaly cleaned !"
 
 re				: fclean all
 
-norm :
-	norminette
+norm 			:
+	@norminette | grep -B 1 "Error"
 
 .PHONY : all clean fclean re
