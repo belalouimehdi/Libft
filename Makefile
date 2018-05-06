@@ -93,10 +93,10 @@ SRC			= $(SRCS_CHAR) $(SRCS_FILE) $(SRCS_INTLIST) $(SRCS_LST) $(SRCS_MAT)\
 
 OBJ			= $(addprefix $(OBJS_DIR), $(SRC:.c=.o))
 
-RED			= \x1b[31m
-GREEN		= \x1b[32m
-YELLO		= \x1b[33m
-WHITE		= \x1b[37m
+RED			= \033[31m
+GREEN		= \033[32m
+YELLO		= \033[33m
+WHITE		= \033[37m
 BIP			= \a
 
 all				: $(PRINTF) $(NAME)
@@ -105,7 +105,7 @@ $(NAME)			: $(SRC) $(OBJS_DIR) $(OBJ)
 		@ar rc $(NAME) $(OBJ)
 		@ranlib $(NAME)
 		@echo "$(GREEN)$(NAME) has been successfully created !$(WHITE)."
-		@say "librery has been successfully created !"
+		@#say "librery has been successfully created !"
 
 $(PRINTF)		:
 		@make -C $(PRINTF_DIR)
@@ -131,7 +131,7 @@ clean			:
 		@make -C $(PRINTF_DIR) clean
 		@rm -fr $(OBJS_DIR)
 		@echo "$(RED)cleaned the libft binary file$(WHITE)."
-		@say "cleaned the librery binary files."
+		@#say "cleaned the librery binary files."
 
 fclean			:
 		@make -C $(PRINTF_DIR) fclean
@@ -139,7 +139,7 @@ fclean			:
 		@rm -f $(NAME)
 		@echo "$(RED)cleaned the $(NAME) file$(WHITE)."
 		@echo "$(GREEN)the directory is totaly cleaned !!$(WHITE)."
-		@say "librery has been totaly cleaned !"
+		@#say "librery has been totaly cleaned !"
 
 re				: fclean all
 

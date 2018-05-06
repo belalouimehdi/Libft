@@ -32,14 +32,12 @@ static void		put_base(t_format *format, int shift, int size_ret, char *str)
 static void		generat_base_ret(t_format *format, char *str)
 {
 	int		shift;
-	char	padd;
 	int		size_ret;
 
 	size_ret = ft_max(format->len_temp, format->precision);
 	size_ret = ft_max(size_ret, format->min_length);
 	shift = size_ret - ft_max(format->len_temp, format->precision);
 	shift = (format->flags.dash) ? 0 : shift;
-	padd = (format->flags.zero) ? '0' : ' ';
 	shift -= 2;
 	size_ret -= 2;
 	put_base(format, shift, size_ret, str);

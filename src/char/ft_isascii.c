@@ -14,7 +14,10 @@
 
 BOOL	ft_isascii(const char c)
 {
-	if ((c >= 0) && (c <= 127))
+	int temp;
+
+	temp = c;
+	if ((temp >= 0) && (temp <= 127))
 		return (T);
 	return (F);
 }

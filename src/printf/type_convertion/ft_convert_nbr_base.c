@@ -39,13 +39,11 @@ static void		put_base(t_format *format, int shift, int size_ret, char *str)
 static void		generat_base_ret(t_format *format, char *str)
 {
 	int		shift;
-	char	padd;
 	int		size_ret;
 
 	size_ret = ft_max(format->len_temp, format->precision);
 	size_ret = ft_max(size_ret, format->min_length);
 	shift = size_ret - ft_max(format->len_temp, format->precision);
-	padd = (format->flags.zero) ? '0' : ' ';
 	if (format->type == 'o' && format->precision == 0
 			&& !str[0] && format->flags.hashtag)
 		ft_put_buf('0', PUT_CHAR);

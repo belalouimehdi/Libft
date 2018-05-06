@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME			=	libftprintf.a
+NAME			= libftprintf.a
 
 FLAGES			= -Wall -Wextra -Werror -c
 
@@ -52,9 +52,9 @@ SRC				= $(SRCS_PUT) $(SRCS_COLOR) $(SRC_PRINTF) $(SRCS_FORMAT)\
 
 OBJ				= $(addprefix $(OBJS_DIR), $(SRC:.c=.o))
 
-RED				= \x1b[31m
-YELLO			= \x1b[33m
-WHITE			= \x1b[37m
+RED				= \033[31m
+YELLO			= \033[33m
+WHITE			= \033[37m
 BIP				= \a
 
 all				: $(NAME)
