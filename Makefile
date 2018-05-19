@@ -6,7 +6,7 @@
 #    By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 21:48:22 by mbelalou          #+#    #+#              #
-#    Updated: 2018/05/05 20:05:07 by mbelalou         ###   ########.fr        #
+#    Updated: 2018/05/19 16:55:49 by mbelalou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,13 +25,17 @@ SRC_FILE	= ft_open_file.c get_next_line.c
 SRCS_FILE	= $(addprefix $(DIR_FILE)/, $(SRC_FILE))
 
 DIR_INTLIST	= src/intlist/
-SRC_INTLIST	= ft_add_bgn_int_list.c ft_is_in_int_list.c ft_add_end_int_list.c\
-			  ft_is_sorted_asc_int_list.c ft_avg_int_list.c\
-			  ft_is_sorted_des_int_list.c ft_clear_int_list.c ft_max_int_list.c\
-			  ft_dell_bgn_int_list.c ft_min_int_list.c ft_dell_end_int_list.c\
-			  ft_new_int_list.c ft_getnbr_found_elem_int_list.c\
-			  ft_put_int_list.c ft_getval_int_list.c ft_size_int_list.c\
-			  ft_is_empty_int_list.c
+SRC_INTLIST	= ft_add_bgn_int_list.c ft_add_end_int_list.c ft_avg_int_list.c\
+			  ft_clear_int_list.c ft_dell_bgn_int_list.c ft_dell_end_int_list.c\
+			  ft_getnbr_found_elem_int_list.c ft_getval_int_list.c\
+			  ft_intervert_head_int_list.c ft_intervert_head_tow_int_list.c\
+			  ft_is_empty_int_list.c ft_is_in_int_list.c\
+			  ft_is_sorted_asc_int_list.c ft_is_sorted_des_int_list.c\
+			  ft_max_int_list.c ft_min_int_list.c ft_new_int_list.c\
+			  ft_push_first_to_list.c ft_put_int_list.c ft_put_tow_piles.c\
+			  ft_shift_bottom_int_list.c ft_shift_bottom_tow_int_list.c\
+			  ft_shift_top_int_list.c ft_shift_top_tow_int_list.c\
+			  ft_size_int_list.c ft_int_list_to_int_tab.c
 SRCS_INTLIST= $(addprefix $(DIR_INTLIST)/, $(SRC_INTLIST))
 
 DIR_LST	= src/lst
@@ -40,7 +44,7 @@ SRC_LST		= ft_lstadd.c ft_lstdel.c ft_lstdelone.c ft_lstiter.c ft_lstmap.c\
 SRCS_LST	= $(addprefix $(DIR_LST)/, $(SRC_LST))
 
 DIR_MAT	= src/mat
-SRC_MAT		= ft_free_mat.c ft_matlen.c   ft_putmat.c
+SRC_MAT		= ft_free_mat.c ft_matlen.c   ft_putmat.c ft_mat_to_str.c
 SRCS_MAT	= $(addprefix $(DIR_MAT)/, $(SRC_MAT))
 
 DIR_MEM	= src/mem
@@ -54,7 +58,8 @@ SRC_NBR		= ft_abs.c ft_decimal_to_base_stat.c ft_max.c ft_atoi.c\
 			  ft_nbrlen.c ft_atoi_v2.c ft_get_len_value_ubase.c ft_putnbr.c\
 			  ft_base_to_decimal.c ft_get_mask.c ft_putnbr_fd.c\
 			  ft_base_to_decimal_v2.c ft_intochar.c ft_udecimal_to_base_stat.c\
-			  ft_decimal_to_base_dynm.c ft_is_elem_base.c ft_unbrlen.c
+			  ft_decimal_to_base_dynm.c ft_is_elem_base.c ft_unbrlen.c\
+			  ft_is_overflow_intmax.c ft_atointmax.c
 SRCS_NBR	= $(addprefix $(DIR_NBR)/, $(SRC_NBR))
 
 DIR_STR	= src/str
@@ -68,11 +73,12 @@ SRC_STR		= ft_comptword.c ft_putendl_fd.c ft_strequ.c ft_strnequ.c\
 			  ft_is_c_in_str.c ft_strcpy.c ft_strmap.c ft_strsub.c ft_isempty.c\
 			  ft_strcut.c ft_strmapi.c ft_strtrim.c ft_itoa.c ft_strdel.c\
 			  ft_strncat.c ft_strupper.c ft_put_buf.c ft_strdup.c ft_strncmp.c\
-			  ft_putendl.c ft_strdup_stat.c ft_strncpy.c
+			  ft_putendl.c ft_strdup_stat.c ft_strncpy.c ft_format_str.c\
+			  ft_strjoin_clean.c
 SRCS_STR	= $(addprefix $(DIR_STR)/, $(SRC_STR))
 
 DIR_SYS	= src/sys
-SRC_SYS		= ft_temporize.c
+SRC_SYS		= ft_temporize.c ft_clear_scr.c
 SRCS_SYS	= $(addprefix $(DIR_SYS)/, $(SRC_SYS))
 
 DIR_WCHAR	= src/wchar
@@ -93,19 +99,19 @@ SRC			= $(SRCS_CHAR) $(SRCS_FILE) $(SRCS_INTLIST) $(SRCS_LST) $(SRCS_MAT)\
 
 OBJ			= $(addprefix $(OBJS_DIR), $(SRC:.c=.o))
 
-RED			= \033[31m
-GREEN		= \033[32m
-YELLO		= \033[33m
-WHITE		= \033[37m
+RED			= \x1b[31m
+GREEN		= \x1b[32m
+YELLO		= \x1b[33m
+WHITE		= \x1b[37m
 BIP			= \a
 
-all				: $(PRINTF) $(NAME)
+all				: $(NAME)
 
-$(NAME)			: $(SRC) $(OBJS_DIR) $(OBJ)
+$(NAME)			: $(PRINTF) $(SRC) $(OBJS_DIR) $(OBJ)
 		@ar rc $(NAME) $(OBJ)
 		@ranlib $(NAME)
 		@echo "$(GREEN)$(NAME) has been successfully created !$(WHITE)."
-		@#say "librery has been successfully created !"
+		@say "librery has been successfully created !"
 
 $(PRINTF)		:
 		@make -C $(PRINTF_DIR)
@@ -131,7 +137,7 @@ clean			:
 		@make -C $(PRINTF_DIR) clean
 		@rm -fr $(OBJS_DIR)
 		@echo "$(RED)cleaned the libft binary file$(WHITE)."
-		@#say "cleaned the librery binary files."
+		@say "cleaned the librery binary files. becase of romain"
 
 fclean			:
 		@make -C $(PRINTF_DIR) fclean
@@ -139,11 +145,15 @@ fclean			:
 		@rm -f $(NAME)
 		@echo "$(RED)cleaned the $(NAME) file$(WHITE)."
 		@echo "$(GREEN)the directory is totaly cleaned !!$(WHITE)."
-		@#say "librery has been totaly cleaned !"
+		@say "librery has been totaly cleaned !"
 
 re				: fclean all
 
 norm 			:
 	@norminette | grep -B 1 "Error"
+
+t				:
+	@make
+	@cp $(NAME) ../test/$(NAME)
 
 .PHONY : all clean fclean re

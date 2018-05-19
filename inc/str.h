@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/03 12:05:02 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/03 15:10:32 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/05/16 18:35:09 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ typedef struct	s_show
 
 size_t			ft_comptword(const char *str, const char separator);
 int				ft_fill_elem(int len, char *bit, char *temp_tab, int lim);
+char			*ft_format_str(const char *str);
 int				ft_getfirstindexword(const char *str, const int idword,
 		const char c);
 size_t			ft_getlenword(const char *str, const int index, const char c);
@@ -46,13 +47,14 @@ int				ft_strcmp(const char *str1, const char *str2);
 char			*ft_strcpy(char *dst, const char *src);
 char			*ft_strcut(const char *src, const size_t begin,
 		const size_t end);
-void			ft_strdel(char **str);
+BOOL			ft_strdel(char **str);
 char			*ft_strdup(const char *str);
 void			ft_strdup_stat(const char *src, char *dest);
 int				ft_strequ(const char *str1, const char *str2);
 void			ft_striter(char *str, void (*f)(char *));
 void			ft_striteri(char *str, void(*f)(unsigned int, char *));
 char			*ft_strjoin(const char *str1, const char *str2);
+char			*ft_strjoin_clear(char *str1, char *str2, int del);
 size_t			ft_strlcat(char *dest, const char *src, size_t size_dest);
 size_t			ft_strlen(const char *str);
 char			*ft_strlower(const char *str);

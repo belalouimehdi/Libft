@@ -5,23 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/05 18:26:13 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/05 18:42:24 by mbelalou         ###   ########.fr       */
+/*   Created: 2018/05/15 11:34:54 by mbelalou          #+#    #+#             */
+/*   Updated: 2018/05/16 16:41:16 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/list.h"
 
+/*
+** pas besoin de faire le deplacement de pointeur il ce fait automatiquement
+*/
+
 void	ft_clear_int_list(t_int_list **list)
 {
-	t_int_list *pt_list;
-	t_int_list *temp_list;
-
-	pt_list = *list;
-	while (pt_list)
-	{
-		temp_list = pt_list;
-		pt_list = pt_list->next;
-		free(temp_list);
-	}
+	while (*list)
+		ft_dell_bgn_int_list(list);
 }

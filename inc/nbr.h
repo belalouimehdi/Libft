@@ -6,18 +6,18 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/03 10:53:10 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/03 12:01:16 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/05/19 16:48:40 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef NBR_H
 # define NBR_H
 
-# include "libft.h"
+# include "list.h"
 
 intmax_t	ft_abs(const intmax_t nbr);
 int			ft_atoi(const char *str);
-
+intmax_t	ft_atointmax(const char *str);
 long		ft_atoi_v1(const char *str);
 long		ft_atoi_v2(const char *str);
 intmax_t	ft_base_to_decimal(const char *str, const int str_base);
@@ -35,7 +35,10 @@ int			ft_get_len_value_base(const intmax_t nbr, const int exit_base);
 int			ft_get_len_value_ubase(const uintmax_t nbr, const int exit_base);
 char		*ft_get_mask(int id_mask, char *oct);
 char		ft_intochar(const int nbr);
+
 int			ft_is_elem_base(const char c, const int base);
+
+BOOL		ft_is_overflow_intmax(char *param);
 
 intmax_t	ft_max(const intmax_t a, const intmax_t b);
 intmax_t	ft_min(const intmax_t a, const intmax_t b);

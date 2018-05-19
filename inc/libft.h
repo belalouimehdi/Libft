@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 17:52:06 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/03 16:24:40 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/05/19 16:48:31 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,13 +64,17 @@
 # include "bool.h"
 
 # include "char.h"
+# include "color.h"
 # include "file.h"
+# include "list.h"
 # include "lst.h"
 # include "mat.h"
 # include "mem.h"
 # include "nbr.h"
 # include "str.h"
 # include "printf.h"
+# include "sys.h"
+# include "wchar.h"
 
 char		*ft_strjoin_clean(const char *s1, const char *s2, int opt);
 

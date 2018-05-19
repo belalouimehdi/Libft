@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 17:20:08 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/03 10:12:22 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/05/08 15:47:48 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 BOOL	ft_isascii(const char c)
 {
-	int temp;
-
-	temp = c;
-	if ((temp >= 0) && (temp <= 127))
+	if (c >= 0)
 		return (T);
 	return (F);
 }

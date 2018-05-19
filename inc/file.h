@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/03 10:14:55 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/03 12:02:02 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/05/16 17:58:12 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct			s_list_fd
 }						t_list_fd;
 
 int						ft_open_file(char *url_file);
+int						get_next_line(const int fd, char **line);
 int						get_next_line(const int fd, char **line);
 
 #endif

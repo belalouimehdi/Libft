@@ -6,14 +6,17 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/16 20:10:45 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/03 13:35:14 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/05/16 16:23:28 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/str.h"
 
-void	ft_strdel(char **str)
+BOOL	ft_strdel(char **str)
 {
 	if (str)
 		ft_memdel((void **)str);
+	else
+		return (F);
+	return (T);
 }
