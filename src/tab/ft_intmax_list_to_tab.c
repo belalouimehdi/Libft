@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dell_bgn_int_list.c                             :+:      :+:    :+:   */
+/*   ft_intmax_list_to_tab.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/05 18:23:54 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/23 20:33:20 by mbelalou         ###   ########.fr       */
+/*   Created: 2018/05/22 14:49:42 by mbelalou          #+#    #+#             */
+/*   Updated: 2018/05/22 16:01:16 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/list.h"
+#include "../../inc/tab.h"
 
-BOOL	ft_dell_bgn_int_list(t_int_list **list)
+intmax_t	*ft_intmax_list_to_tab(t_int_list *list)
 {
-	t_int_list	*to_free;
+	intmax_t	*tab_ret;
+	int			size;
 
-	if ((*list) == NULL)
-		return (F);
-	to_free = *list;
-	if (!(*list)->next)
-		*list = NULL;
-	else
-		*list = (*list)->next;
-	free(to_free);
-	return (T);
+	if (!list)
+		return (NULL);
+	size = ft_size_int_list(list);
+	tab_ret = malloc (sizeof (*tab_ret) * size);
+	ft_int_list_to_tab(&tab_ret, list, size);
+	return (tab_ret);
 }

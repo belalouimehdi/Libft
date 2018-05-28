@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dell_bgn_int_list.c                             :+:      :+:    :+:   */
+/*   ft_put_intmax_tab.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/05 18:23:54 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/23 20:33:20 by mbelalou         ###   ########.fr       */
+/*   Created: 2018/05/22 12:59:25 by mbelalou          #+#    #+#             */
+/*   Updated: 2018/05/22 15:53:21 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/list.h"
+#include "../../inc/tab.h"
 
-BOOL	ft_dell_bgn_int_list(t_int_list **list)
+void	ft_put_intmax_tab(intmax_t *tab, size_t size)
 {
-	t_int_list	*to_free;
+	size_t	pt;
 
-	if ((*list) == NULL)
-		return (F);
-	to_free = *list;
-	if (!(*list)->next)
-		*list = NULL;
-	else
-		*list = (*list)->next;
-	free(to_free);
-	return (T);
+	pt = 0;
+	ft_printf("tab {");
+	while (pt < size)
+	{
+		if (pt + 1 < size)
+			ft_printf("%d, ", tab[pt++]);
+		else
+			ft_printf("%d", tab[pt++]);
+	}
+	ft_printf("}.\n");
 }

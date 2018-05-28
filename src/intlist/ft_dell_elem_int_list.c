@@ -1,28 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dell_bgn_int_list.c                             :+:      :+:    :+:   */
+/*   ft_dell_elem_int_list.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/05 18:23:54 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/23 20:33:20 by mbelalou         ###   ########.fr       */
+/*   Created: 2018/05/22 13:55:36 by mbelalou          #+#    #+#             */
+/*   Updated: 2018/05/22 13:58:26 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/list.h"
 
-BOOL	ft_dell_bgn_int_list(t_int_list **list)
+BOOL	ft_dell_elem_int_list(intmax_t nbr, t_int_list **list)
 {
-	t_int_list	*to_free;
+	t_int_list*pt;
+	t_int_list*pt_save;
 
-	if ((*list) == NULL)
+	if (!*list)
 		return (F);
-	to_free = *list;
-	if (!(*list)->next)
-		*list = NULL;
-	else
-		*list = (*list)->next;
-	free(to_free);
+	pt_save = NULL;
+	pt = *list;
+	while (pt)
+	{
+		if (pt->data == nbr)
+		{
+			pt_save->next = pt->next;
+			free(pt);
+			pt = pt_save->next;
+		}
+		else
+		{
+			pt_save = pt;
+			pt = pt->next;
+		}
+	}
 	return (T);
 }

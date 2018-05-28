@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dell_bgn_int_list.c                             :+:      :+:    :+:   */
+/*   ft_swap_int.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/05 18:23:54 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/23 20:33:20 by mbelalou         ###   ########.fr       */
+/*   Created: 2018/05/22 13:05:59 by mbelalou          #+#    #+#             */
+/*   Updated: 2018/05/22 13:12:55 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/list.h"
+#include "../../inc/nbr.h"
 
-BOOL	ft_dell_bgn_int_list(t_int_list **list)
+void	ft_swap_int(intmax_t *a, intmax_t *b)
 {
-	t_int_list	*to_free;
+	intmax_t temp;
 
-	if ((*list) == NULL)
-		return (F);
-	to_free = *list;
-	if (!(*list)->next)
-		*list = NULL;
-	else
-		*list = (*list)->next;
-	free(to_free);
-	return (T);
+	temp = *b;
+	*b = *a;
+	*a = temp;
 }

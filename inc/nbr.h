@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/03 10:53:10 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/19 16:48:40 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/05/22 13:16:21 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,12 @@ char		*ft_get_mask(int id_mask, char *oct);
 char		ft_intochar(const int nbr);
 
 int			ft_is_elem_base(const char c, const int base);
-
 BOOL		ft_is_overflow_intmax(char *param);
 
 intmax_t	ft_max(const intmax_t a, const intmax_t b);
 intmax_t	ft_min(const intmax_t a, const intmax_t b);
+
+void		ft_swap_int(intmax_t *a, intmax_t *b);
 
 short		ft_nbrlen(intmax_t nbr);
 short		ft_unbrlen(uintmax_t nbr);

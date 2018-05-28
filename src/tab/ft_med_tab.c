@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dell_bgn_int_list.c                             :+:      :+:    :+:   */
+/*   ft_med_tab.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/05 18:23:54 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/23 20:33:20 by mbelalou         ###   ########.fr       */
+/*   Created: 2018/05/22 15:38:51 by mbelalou          #+#    #+#             */
+/*   Updated: 2018/05/23 14:48:32 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/list.h"
+#include "../../inc/tab.h"
 
-BOOL	ft_dell_bgn_int_list(t_int_list **list)
+long double		ft_med_tab(intmax_t *tab, size_t size)
 {
-	t_int_list	*to_free;
+	long double	med;
 
-	if ((*list) == NULL)
-		return (F);
-	to_free = *list;
-	if (!(*list)->next)
-		*list = NULL;
+	ft_mergesort_tab(tab, size);
+	med = 0;
+	if (size % 2)
+		med = tab[(size / 2)];
 	else
-		*list = (*list)->next;
-	free(to_free);
-	return (T);
+		ft_avg_tab(tab, &med, size);
+	return (med);
 }

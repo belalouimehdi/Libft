@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 17:52:06 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/19 16:48:31 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/05/22 14:46:54 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,12 @@
 # include <inttypes.h>
 # include "bool.h"
 
+typedef struct	s_int_list
+{
+	intmax_t	data;
+	struct s_int_list *next;
+}				t_int_list;
+
 # include "char.h"
 # include "color.h"
 # include "file.h"
@@ -73,8 +79,10 @@
 # include "nbr.h"
 # include "str.h"
 # include "printf.h"
+# include "tab.h"
 # include "sys.h"
 # include "wchar.h"
+
 
 char		*ft_strjoin_clean(const char *s1, const char *s2, int opt);
 

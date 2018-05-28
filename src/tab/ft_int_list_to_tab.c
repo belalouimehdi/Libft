@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dell_bgn_int_list.c                             :+:      :+:    :+:   */
+/*   ft_int_list_to_tab.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/05 18:23:54 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/23 20:33:20 by mbelalou         ###   ########.fr       */
+/*   Created: 2018/05/22 16:02:58 by mbelalou          #+#    #+#             */
+/*   Updated: 2018/05/22 16:09:35 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/list.h"
+#include "../../inc/tab.h"
 
-BOOL	ft_dell_bgn_int_list(t_int_list **list)
+void	ft_int_list_to_tab(intmax_t **dest, t_int_list *src, int size)
 {
-	t_int_list	*to_free;
+	int pt;
 
-	if ((*list) == NULL)
-		return (F);
-	to_free = *list;
-	if (!(*list)->next)
-		*list = NULL;
-	else
-		*list = (*list)->next;
-	free(to_free);
-	return (T);
+	pt = -1;
+	while (size--)
+	{
+		(*dest)[++pt] = src->data;
+		src = src->next;
+	}
 }

@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dell_bgn_int_list.c                             :+:      :+:    :+:   */
+/*   ft_bubble_sort_tab.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/05 18:23:54 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/23 20:33:20 by mbelalou         ###   ########.fr       */
+/*   Created: 2018/05/22 13:20:19 by mbelalou          #+#    #+#             */
+/*   Updated: 2018/05/22 15:16:26 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/list.h"
+#include "../../inc/tab.h"
 
-BOOL	ft_dell_bgn_int_list(t_int_list **list)
+void	ft_bubble_sort_tab(intmax_t *tab, size_t size)
 {
-	t_int_list	*to_free;
+	size_t i;
+	size_t j;
 
-	if ((*list) == NULL)
-		return (F);
-	to_free = *list;
-	if (!(*list)->next)
-		*list = NULL;
-	else
-		*list = (*list)->next;
-	free(to_free);
-	return (T);
+	i = 0;
+	while (i < size)
+	{
+		j = i;
+		while (j < size)
+		{
+			if (tab[i] > tab[j])
+				ft_swap_int(&tab[i], &tab[j]);
+			j++;
+		}
+		i++;
+	}
 }

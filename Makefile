@@ -6,7 +6,7 @@
 #    By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 21:48:22 by mbelalou          #+#    #+#              #
-#    Updated: 2018/05/19 16:55:49 by mbelalou         ###   ########.fr        #
+#    Updated: 2018/05/23 19:05:09 by mbelalou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,10 @@ SRC_INTLIST	= ft_add_bgn_int_list.c ft_add_end_int_list.c ft_avg_int_list.c\
 			  ft_push_first_to_list.c ft_put_int_list.c ft_put_tow_piles.c\
 			  ft_shift_bottom_int_list.c ft_shift_bottom_tow_int_list.c\
 			  ft_shift_top_int_list.c ft_shift_top_tow_int_list.c\
-			  ft_size_int_list.c ft_int_list_to_int_tab.c
+			  ft_size_int_list.c ft_add_elem_int_list.c\
+			  ft_bubble_sort_int_list.c ft_dell_elem_int_list.c\
+			  ft_dell_index_int_list.c ft_tab_to_int_list.c\
+			  ft_mergesort_int_list.c ft_med_int_list.c
 SRCS_INTLIST= $(addprefix $(DIR_INTLIST)/, $(SRC_INTLIST))
 
 DIR_LST	= src/lst
@@ -59,7 +62,7 @@ SRC_NBR		= ft_abs.c ft_decimal_to_base_stat.c ft_max.c ft_atoi.c\
 			  ft_base_to_decimal.c ft_get_mask.c ft_putnbr_fd.c\
 			  ft_base_to_decimal_v2.c ft_intochar.c ft_udecimal_to_base_stat.c\
 			  ft_decimal_to_base_dynm.c ft_is_elem_base.c ft_unbrlen.c\
-			  ft_is_overflow_intmax.c ft_atointmax.c
+			  ft_is_overflow_intmax.c ft_atointmax.c ft_swap_int.c
 SRCS_NBR	= $(addprefix $(DIR_NBR)/, $(SRC_NBR))
 
 DIR_STR	= src/str
@@ -77,7 +80,7 @@ SRC_STR		= ft_comptword.c ft_putendl_fd.c ft_strequ.c ft_strnequ.c\
 			  ft_strjoin_clean.c
 SRCS_STR	= $(addprefix $(DIR_STR)/, $(SRC_STR))
 
-DIR_SYS	= src/sys
+DIR_SYS		= src/sys
 SRC_SYS		= ft_temporize.c ft_clear_scr.c
 SRCS_SYS	= $(addprefix $(DIR_SYS)/, $(SRC_SYS))
 
@@ -85,6 +88,12 @@ DIR_WCHAR	= src/wchar
 SRC_WCHAR	= ft_putwstr.c ft_wcharlen.c ft_wstrlen.c ft_wchar_to_string.c\
 			  ft_wstringlen.c
 SRCS_WCHAR	= $(addprefix $(DIR_WCHAR)/, $(SRC_WCHAR))
+
+DIR_TAB		= src/tab
+SRC_TAB		= ft_put_intmax_tab.c ft_bubble_sort_tab.c ft_mergesort_tab.c\
+			  ft_int_list_to_tab.c ft_avg_tab.c ft_intmax_list_to_tab.c\
+			  ft_med_tab.c
+SRCS_TAB	= $(addprefix $(DIR_TAB)/, $(SRC_TAB))
 
 INC_DIR		= inc/
 
@@ -95,7 +104,8 @@ PRINTF_DIR	= src/printf
 PRINTF		= libftprintf.a
 
 SRC			= $(SRCS_CHAR) $(SRCS_FILE) $(SRCS_INTLIST) $(SRCS_LST) $(SRCS_MAT)\
-			  $(SRCS_MEM) $(SRCS_NBR) $(SRCS_STR) $(SRCS_SYS) $(SRCS_WCHAR)
+			  $(SRCS_MEM) $(SRCS_NBR) $(SRCS_STR) $(SRCS_SYS) $(SRCS_WCHAR)\
+			  $(SRCS_TAB)
 
 OBJ			= $(addprefix $(OBJS_DIR), $(SRC:.c=.o))
 
@@ -111,7 +121,7 @@ $(NAME)			: $(PRINTF) $(SRC) $(OBJS_DIR) $(OBJ)
 		@ar rc $(NAME) $(OBJ)
 		@ranlib $(NAME)
 		@echo "$(GREEN)$(NAME) has been successfully created !$(WHITE)."
-		@say "librery has been successfully created !"
+	#	@say "librery has been successfully created !"
 
 $(PRINTF)		:
 		@make -C $(PRINTF_DIR)
@@ -119,7 +129,7 @@ $(PRINTF)		:
 
 $(OBJS_DIR)%.o	: %.c $(INC_DIR)
 		@gcc $(FLAGES) $< -o $@ -I $(INC_DIR)
-
+		@echo "$< compiling"
 $(OBJS_DIR)		:
 		@mkdir -p $(OBJS_DIR);
 		@mkdir -p $(OBJS_DIR)/$(DIR_CHAR);
@@ -130,6 +140,7 @@ $(OBJS_DIR)		:
 		@mkdir -p $(OBJS_DIR)/$(DIR_MEM);
 		@mkdir -p $(OBJS_DIR)/$(DIR_NBR);
 		@mkdir -p $(OBJS_DIR)/$(DIR_STR);
+		@mkdir -p $(OBJS_DIR)/$(DIR_TAB);
 		@mkdir -p $(OBJS_DIR)/$(DIR_SYS);
 		@mkdir -p $(OBJS_DIR)/$(DIR_WCHAR);
 
@@ -137,15 +148,15 @@ clean			:
 		@make -C $(PRINTF_DIR) clean
 		@rm -fr $(OBJS_DIR)
 		@echo "$(RED)cleaned the libft binary file$(WHITE)."
-		@say "cleaned the librery binary files. becase of romain"
+		@say "cleaned the librery binary files."
 
 fclean			:
 		@make -C $(PRINTF_DIR) fclean
 		@rm -fr $(OBJS_DIR)
 		@rm -f $(NAME)
 		@echo "$(RED)cleaned the $(NAME) file$(WHITE)."
-		@echo "$(GREEN)the directory is totaly cleaned !!$(WHITE)."
-		@say "librery has been totaly cleaned !"
+		@echo "$(GREEN)the $(NAME) directory is totaly cleaned !!$(WHITE)."
+		@say "the $(NAME) directory is totaly cleaned !"
 
 re				: fclean all
 

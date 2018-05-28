@@ -1,28 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dell_bgn_int_list.c                             :+:      :+:    :+:   */
+/*   ft_add_elem_int_list.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/05 18:23:54 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/23 20:33:20 by mbelalou         ###   ########.fr       */
+/*   Created: 2018/05/21 15:16:23 by mbelalou          #+#    #+#             */
+/*   Updated: 2018/05/21 15:35:45 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/list.h"
 
-BOOL	ft_dell_bgn_int_list(t_int_list **list)
+BOOL	ft_add_elem_int_list(int index, intmax_t nbr, t_int_list **list)
 {
-	t_int_list	*to_free;
+	int			size;
+	int			cp;
+	t_int_list	*temp;
+	t_int_list	*head;
 
-	if ((*list) == NULL)
+	head = *list;
+	if (index == 0)
+	{
+		ft_add_bgn_int_list(nbr, list);
+		return (T);
+	}
+	size = ft_size_int_list(*list);
+	if (index > size)
 		return (F);
-	to_free = *list;
-	if (!(*list)->next)
-		*list = NULL;
-	else
-		*list = (*list)->next;
-	free(to_free);
+	cp = -1;
+	while (++cp < index)
+	{
+		temp = (*list);
+		(*list) = (*list)->next;
+	}
+	temp->next = ft_new_int_list(nbr);
+	(temp->next)->next = *list;
+	*list = head;
 	return (T);
 }

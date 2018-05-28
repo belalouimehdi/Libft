@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dell_bgn_int_list.c                             :+:      :+:    :+:   */
+/*   ft_avg_tab.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/05 18:23:54 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/23 20:33:20 by mbelalou         ###   ########.fr       */
+/*   Created: 2018/05/22 14:47:13 by mbelalou          #+#    #+#             */
+/*   Updated: 2018/05/22 15:38:23 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/list.h"
+#include "../../inc/tab.h"
 
-BOOL	ft_dell_bgn_int_list(t_int_list **list)
+/*
+** printf(" avg tab = %Lf ", avg);
+**/
+
+BOOL	ft_avg_tab(const intmax_t *tab, long double *avg, int size)
 {
-	t_int_list	*to_free;
+	int		pt;
 
-	if ((*list) == NULL)
+	*avg = 0;
+	pt = -1;
+	while (size--)
+		*avg += tab[++pt];
+	if (pt < 0)
 		return (F);
-	to_free = *list;
-	if (!(*list)->next)
-		*list = NULL;
-	else
-		*list = (*list)->next;
-	free(to_free);
+	*avg /= pt;
 	return (T);
 }
