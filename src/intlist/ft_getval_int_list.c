@@ -20,7 +20,7 @@ BOOL	ft_getval_int_list(const t_int_list *list, const size_t index,
 	cp = 0;
 	if (!list)
 		return (F);
-	while (cp <= index && list)
+	while (cp < index && list)
 	{
 		list = list->next;
 		cp++;

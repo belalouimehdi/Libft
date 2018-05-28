@@ -158,7 +158,7 @@ clean			:
 		@make -C $(PRINTF_DIR) clean
 		@rm -fr $(OBJS_DIR)
 		@echo "$(RED)cleaned the libft binary file$(WHITE)."
-		@say "cleaned the librery binary files."
+		@#say "cleaned the librery binary files."
 
 fclean			:
 		@make -C $(PRINTF_DIR) fclean
@@ -166,7 +166,7 @@ fclean			:
 		@rm -f $(NAME)
 		@echo "$(RED)cleaned the $(NAME) file$(WHITE)."
 		@echo "$(GREEN)the $(NAME) directory is totaly cleaned !!$(WHITE)."
-		@say "the $(NAME) directory is totaly cleaned !"
+		@#say "the $(NAME) directory is totaly cleaned !"
 
 re				: fclean all
 
