@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 14:13:28 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/23 14:48:18 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/05/28 10:09:52 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ long double	ft_med_int_list(t_int_list *list)
 	if (size % 2)
 		med = temp_tab[(size / 2)];
 	else
-		ft_avg_tab(temp_tab, &med, size);
+		med = (temp_tab[size / 2] + temp_tab[(size / 2) + 1]) / 2;
 	return (med);
 }

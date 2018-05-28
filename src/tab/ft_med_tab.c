@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 15:38:51 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/23 14:48:32 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/05/28 10:10:49 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ long double		ft_med_tab(intmax_t *tab, size_t size)
 	if (size % 2)
 		med = tab[(size / 2)];
 	else
-		ft_avg_tab(tab, &med, size);
+		med = (tab[size / 2] + tab[(size / 2) + 1]) / 2;
 	return (med);
 }
