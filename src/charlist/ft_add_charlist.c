@@ -6,18 +6,18 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/28 12:34:10 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/28 15:26:40 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/05/28 16:44:14 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/charlist.h"
 
-BOOL	ft_add_charlist(char *action, t_charlist **list)
+BOOL	ft_add_charlist(char *data, t_charlist **list)
 {
 	t_charlist	*temp_node;
 	t_charlist	*pt_list;
 
-	if (!(temp_node = ft_new_charlist(action)))
+	if (!(temp_node = ft_new_charlist(data)))
 		return (F);
 	if (!(*list))
 		*list = temp_node;
