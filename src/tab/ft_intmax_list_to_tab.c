@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 14:49:42 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/22 16:01:16 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/05/28 15:37:17 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ intmax_t	*ft_intmax_list_to_tab(t_int_list *list)
 	if (!list)
 		return (NULL);
 	size = ft_size_int_list(list);
-	tab_ret = malloc (sizeof (*tab_ret) * size);
+	tab_ret = malloc(sizeof(*tab_ret) * size);
 	ft_int_list_to_tab(&tab_ret, list, size);
 	return (tab_ret);
 }

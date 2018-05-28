@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 14:11:42 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/22 15:59:19 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/05/28 15:38:33 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,10 +65,10 @@ static void	merge_tab(intmax_t *tab, int mid, int size)
 	int			pt_r;
 	int			pt;
 
-	temp = malloc (sizeof(intmax_t) * size);
+	temp = malloc(sizeof(intmax_t) * size);
 	pt = 0;
 	pt_l = 0;
-	pt_r = mid ;
+	pt_r = mid;
 	while (pt_l < mid && pt_r < size)
 	{
 		if (tab[pt_l] > tab[pt_r])
@@ -76,10 +76,10 @@ static void	merge_tab(intmax_t *tab, int mid, int size)
 		else
 			temp[pt++] = tab[pt_l++];
 	}
-	fill_tab_int(temp + pt, tab + pt_l, mid - pt_l );
+	fill_tab_int(temp + pt, tab + pt_l, mid - pt_l);
 	fill_tab_int(temp + pt + pt_l - mid, tab + pt_r, size - pt_r);
 	while (size--)
-		tab[size] =  temp[size];
+		tab[size] = temp[size];
 	free(temp);
 }
 
@@ -89,9 +89,9 @@ void		ft_mergesort_tab(intmax_t *tab, int r)
 
 	if (r > 1)
 	{
-		mid = (r)/2;
+		mid = r / 2;
 		ft_mergesort_tab(tab, mid);
-		ft_mergesort_tab(tab + mid , r - mid);
+		ft_mergesort_tab(tab + mid, r - mid);
 		merge_tab(tab, mid, r);
 	}
 }

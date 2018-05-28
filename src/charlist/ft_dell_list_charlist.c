@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_mergesort_int_list.c                            :+:      :+:    :+:   */
+/*   ft_dell_list_charlist.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/22 14:31:51 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/28 14:38:29 by mbelalou         ###   ########.fr       */
+/*   Created: 2018/05/28 12:34:59 by mbelalou          #+#    #+#             */
+/*   Updated: 2018/05/28 15:26:12 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/tab.h"
+#include "../../inc/charlist.h"
 
-void	ft_mergesort_int_list(t_int_list **list, int size)
+BOOL	ft_dell_list_charlist(t_charlist **to_free)
 {
-	intmax_t	*temp_tab;
+	t_charlist *pt;
 
-	temp_tab = ft_intmax_list_to_tab(*list);
-	ft_mergesort_tab(temp_tab, size);
-	ft_clear_int_list(list);
-	*list = ft_tab_to_int_list(temp_tab, sizeof(temp_tab) * size);
-	free(temp_tab);
+	if (!to_free)
+		return (F);
+	pt = *to_free;
+	while (*to_free)
+	{
+		pt = *to_free;
+		*to_free = (*to_free)->next;
+		ft_dell_charlist(&pt);
+	}
+	return (T);
 }

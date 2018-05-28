@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 14:01:24 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/22 15:57:39 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/05/28 12:59:38 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ t_int_list	*ft_tab_to_int_list(intmax_t *tab, size_t size)
 
 	list = NULL;
 	pt = 0;
+	size /= sizeof(intmax_t);
 	while (pt < size)
 		ft_add_end_int_list(tab[pt++], &list);
 	return (list);

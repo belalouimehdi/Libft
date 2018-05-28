@@ -6,7 +6,7 @@
 #    By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 21:48:22 by mbelalou          #+#    #+#              #
-#    Updated: 2018/05/23 19:05:09 by mbelalou         ###   ########.fr        #
+#    Updated: 2018/05/28 14:49:21 by mbelalou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ SRCS_FILE	= $(addprefix $(DIR_FILE)/, $(SRC_FILE))
 DIR_INTLIST	= src/intlist/
 SRC_INTLIST	= ft_add_bgn_int_list.c ft_add_end_int_list.c ft_avg_int_list.c\
 			  ft_clear_int_list.c ft_dell_bgn_int_list.c ft_dell_end_int_list.c\
-			  ft_getnbr_found_elem_int_list.c ft_getval_int_list.c\
+			  ft_getnbr_found_elem_int_list.c ft_get_val_intlist.c\
 			  ft_intervert_head_int_list.c ft_intervert_head_tow_int_list.c\
 			  ft_is_empty_int_list.c ft_is_in_int_list.c\
 			  ft_is_sorted_asc_int_list.c ft_is_sorted_des_int_list.c\
@@ -38,7 +38,10 @@ SRC_INTLIST	= ft_add_bgn_int_list.c ft_add_end_int_list.c ft_avg_int_list.c\
 			  ft_size_int_list.c ft_add_elem_int_list.c\
 			  ft_bubble_sort_int_list.c ft_dell_elem_int_list.c\
 			  ft_dell_index_int_list.c ft_tab_to_int_list.c\
-			  ft_mergesort_int_list.c ft_med_int_list.c
+			  ft_mergesort_int_list.c ft_med_int_list.c\
+			  ft_get_index_min_int_list.c ft_get_index_max_int_list.c\
+			  ft_get_index_first_elem_bigger_intlist.c\
+			  ft_get_index_last_elem_bigger_intlist.c
 SRCS_INTLIST= $(addprefix $(DIR_INTLIST)/, $(SRC_INTLIST))
 
 DIR_LST	= src/lst
@@ -95,6 +98,12 @@ SRC_TAB		= ft_put_intmax_tab.c ft_bubble_sort_tab.c ft_mergesort_tab.c\
 			  ft_med_tab.c
 SRCS_TAB	= $(addprefix $(DIR_TAB)/, $(SRC_TAB))
 
+DIR_CHARLST	= src/charlist/
+SRC_CHARLST	= ft_add_charlist.c ft_dell_charlist.c ft_dell_list_charlist.c\
+			  ft_new_charlist.c ft_put_charlist.c ft_isempty_charlist.c\
+			  ft_put_list_charlist.c
+SRCS_CHARLST	= $(addprefix $(DIR_CHARLST)/, $(SRC_CHARLST))
+
 INC_DIR		= inc/
 
 OBJS_DIR	= bin/
@@ -105,7 +114,7 @@ PRINTF		= libftprintf.a
 
 SRC			= $(SRCS_CHAR) $(SRCS_FILE) $(SRCS_INTLIST) $(SRCS_LST) $(SRCS_MAT)\
 			  $(SRCS_MEM) $(SRCS_NBR) $(SRCS_STR) $(SRCS_SYS) $(SRCS_WCHAR)\
-			  $(SRCS_TAB)
+			  $(SRCS_TAB) $(SRCS_CHARLST)
 
 OBJ			= $(addprefix $(OBJS_DIR), $(SRC:.c=.o))
 
@@ -121,7 +130,7 @@ $(NAME)			: $(PRINTF) $(SRC) $(OBJS_DIR) $(OBJ)
 		@ar rc $(NAME) $(OBJ)
 		@ranlib $(NAME)
 		@echo "$(GREEN)$(NAME) has been successfully created !$(WHITE)."
-	#	@say "librery has been successfully created !"
+		@#	@say "librery has been successfully created !"
 
 $(PRINTF)		:
 		@make -C $(PRINTF_DIR)
@@ -132,6 +141,7 @@ $(OBJS_DIR)%.o	: %.c $(INC_DIR)
 		@echo "$< compiling"
 $(OBJS_DIR)		:
 		@mkdir -p $(OBJS_DIR);
+		@mkdir -p $(OBJS_DIR)/$(DIR_CHARLST);
 		@mkdir -p $(OBJS_DIR)/$(DIR_CHAR);
 		@mkdir -p $(OBJS_DIR)/$(DIR_FILE);
 		@mkdir -p $(OBJS_DIR)/$(DIR_INTLIST);

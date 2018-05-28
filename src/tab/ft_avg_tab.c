@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 14:47:13 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/22 15:38:23 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/05/28 15:38:49 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 /*
 ** printf(" avg tab = %Lf ", avg);
-**/
+*/
 
 BOOL	ft_avg_tab(const intmax_t *tab, long double *avg, int size)
 {
@@ -22,6 +22,7 @@ BOOL	ft_avg_tab(const intmax_t *tab, long double *avg, int size)
 
 	*avg = 0;
 	pt = -1;
+	size /= sizeof(intmax_t);
 	while (size--)
 		*avg += tab[++pt];
 	if (pt < 0)

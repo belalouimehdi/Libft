@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 12:59:25 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/22 15:53:21 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/05/28 12:52:17 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ void	ft_put_intmax_tab(intmax_t *tab, size_t size)
 
 	pt = 0;
 	ft_printf("tab {");
+	size /= sizeof(intmax_t);
 	while (pt < size)
 	{
 		if (pt + 1 < size)

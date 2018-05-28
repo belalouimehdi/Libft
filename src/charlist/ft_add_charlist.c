@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_mergesort_int_list.c                            :+:      :+:    :+:   */
+/*   ft_add_charlist.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/22 14:31:51 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/28 14:38:29 by mbelalou         ###   ########.fr       */
+/*   Created: 2018/05/28 12:34:10 by mbelalou          #+#    #+#             */
+/*   Updated: 2018/05/28 15:26:40 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/tab.h"
+#include "../../inc/charlist.h"
 
-void	ft_mergesort_int_list(t_int_list **list, int size)
+BOOL	ft_add_charlist(char *action, t_charlist **list)
 {
-	intmax_t	*temp_tab;
+	t_charlist	*temp_node;
+	t_charlist	*pt_list;
 
-	temp_tab = ft_intmax_list_to_tab(*list);
-	ft_mergesort_tab(temp_tab, size);
-	ft_clear_int_list(list);
-	*list = ft_tab_to_int_list(temp_tab, sizeof(temp_tab) * size);
-	free(temp_tab);
+	if (!(temp_node = ft_new_charlist(action)))
+		return (F);
+	if (!(*list))
+		*list = temp_node;
+	else
+	{
+		pt_list = *list;
+		while (pt_list->next)
+			pt_list = pt_list->next;
+		pt_list->next = temp_node;
+	}
+	return (T);
 }

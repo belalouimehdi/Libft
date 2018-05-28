@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_mergesort_int_list.c                            :+:      :+:    :+:   */
+/*   ft_put_charlist.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/22 14:31:51 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/28 14:38:29 by mbelalou         ###   ########.fr       */
+/*   Created: 2018/05/28 12:35:44 by mbelalou          #+#    #+#             */
+/*   Updated: 2018/05/28 14:49:47 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/tab.h"
+#include "../../inc/charlist.h"
 
-void	ft_mergesort_int_list(t_int_list **list, int size)
+void	ft_put_charlist(t_charlist *list)
 {
-	intmax_t	*temp_tab;
-
-	temp_tab = ft_intmax_list_to_tab(*list);
-	ft_mergesort_tab(temp_tab, size);
-	ft_clear_int_list(list);
-	*list = ft_tab_to_int_list(temp_tab, sizeof(temp_tab) * size);
-	free(temp_tab);
+	if (!list)
+		ft_printf("(NULL)\n");
+	else
+		ft_printf("%s", list->data);
 }
