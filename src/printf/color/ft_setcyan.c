@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/06 17:57:07 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/03 16:29:43 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/05/29 17:44:50 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_setcyan(void)
 	int		pt;
 
 	pt = -1;
-	str = "\x1B[36m";
+	str = "\033[36m";
 	while (str[++pt])
 		ft_put_buf(str[pt], ING);
 }

@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/06 17:57:01 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/03 16:27:37 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/05/29 17:44:40 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_setblue(void)
 	int		pt;
 
 	pt = -1;
-	str = "\x1B[34m";
+	str = "\033[34m";
 	while (str[++pt])
 		ft_put_buf(str[pt], ING);
 }

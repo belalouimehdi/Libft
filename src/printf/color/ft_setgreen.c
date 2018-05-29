@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/06 17:57:12 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/03 16:29:57 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/05/29 17:45:00 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_setgreen(void)
 	int		pt;
 
 	pt = -1;
-	str = "\x1B[32m";
+	str = "\033[32m";
 	while (str[++pt])
 		ft_put_buf(str[pt], ING);
 }

@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/28 14:11:31 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/28 14:38:11 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/05/29 15:41:59 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,12 @@ BOOL	ft_get_val_intlist(const t_int_list *list, const int index,
 	cp = 0;
 	if (!list || index < 0)
 		return (F);
-	while (cp < index && list)
+	while (list && cp < index)
 	{
 		list = list->next;
 		cp++;
 	}
-	if (list->data)
+	if (list)
 	{
 		*data = list->data;
 		return (T);
