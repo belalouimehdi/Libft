@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/05 17:45:13 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/29 19:50:31 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/05/30 19:20:52 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ BOOL		ft_shift_bottom_tow_int_list(t_int_list **list_a,
 		t_int_list **list_b);
 BOOL		ft_shift_top_int_list(t_int_list **list);
 BOOL		ft_shift_top_tow_int_list(t_int_list **list_a, t_int_list **list_b);
-size_t		ft_size_int_list(const t_int_list *list);
+size_t		ft_size_intlist(const t_int_list *list);
 
 t_int_list	*ft_tab_to_int_list(intmax_t *tab, size_t size);
 void		ft_clear_int_list(t_int_list **list);

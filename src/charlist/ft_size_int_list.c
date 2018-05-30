@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intmax_list_to_tab.c                            :+:      :+:    :+:   */
+/*   ft_size_int_list.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/22 14:49:42 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/30 19:22:29 by mbelalou         ###   ########.fr       */
+/*   Created: 2018/05/05 18:17:13 by mbelalou          #+#    #+#             */
+/*   Updated: 2018/05/05 18:18:43 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/tab.h"
+#include "../../inc/list.h"
 
-intmax_t	*ft_intmax_list_to_tab(t_int_list *list)
+size_t		ft_size_int_list(const t_int_list *list)
 {
-	intmax_t	*tab_ret;
-	int			size;
+	size_t size;
 
-	if (!list)
-		return (NULL);
-	size = ft_size_intlist(list);
-	tab_ret = malloc(sizeof(*tab_ret) * size);
-	ft_int_list_to_tab(&tab_ret, list, size);
-	return (tab_ret);
+	size = 0;
+	while (list)
+	{
+		list = list->next;
+		size++;
+	}
+	return (size);
 }

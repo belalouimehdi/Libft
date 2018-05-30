@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/08 18:55:44 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/19 16:43:51 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/05/30 19:20:32 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,8 @@ void		ft_put_tow_piles(t_int_list *l_a, t_int_list *l_b)
 	int size_lb;
 	int max_size;
 
-	size_la = ft_size_int_list(l_a);
-	size_lb = ft_size_int_list(l_b);
+	size_la = ft_size_intlist(l_a);
+	size_lb = ft_size_intlist(l_b);
 	max_size = ft_max(size_la, size_lb);
 	if (!max_size)
 		ft_printf("\n\t[∅]\t\t[∅]");

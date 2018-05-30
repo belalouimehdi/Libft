@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 15:16:23 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/21 15:35:45 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/05/30 19:21:41 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ BOOL	ft_add_elem_int_list(int index, intmax_t nbr, t_int_list **list)
 		ft_add_bgn_int_list(nbr, list);
 		return (T);
 	}
-	size = ft_size_int_list(*list);
+	size = ft_size_intlist(*list);
 	if (index > size)
 		return (F);
 	cp = -1;

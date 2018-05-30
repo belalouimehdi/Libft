@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/28 10:45:50 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/28 15:28:15 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/05/30 19:19:47 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,7 @@ BOOL					ft_add_charlist(char *data, t_charlist **list);
 BOOL					ft_dell_charlist(t_charlist **to_free);
 BOOL					ft_dell_list_charlist(t_charlist **to_free);
 BOOL					ft_isempty_charlist(t_charlist *list);
+
+size_t					ft_size_charlist(const t_charlist *list);
 
 #endif

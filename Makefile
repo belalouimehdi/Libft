@@ -6,7 +6,7 @@
 #    By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 21:48:22 by mbelalou          #+#    #+#              #
-#    Updated: 2018/05/28 16:30:35 by mbelalou         ###   ########.fr        #
+#    Updated: 2018/05/30 19:23:02 by mbelalou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ SRC_INTLIST	= ft_add_bgn_int_list.c ft_add_end_int_list.c ft_avg_int_list.c\
 			  ft_push_first_to_list.c ft_put_int_list.c ft_put_tow_piles.c\
 			  ft_shift_bottom_int_list.c ft_shift_bottom_tow_int_list.c\
 			  ft_shift_top_int_list.c ft_shift_top_tow_int_list.c\
-			  ft_size_int_list.c ft_add_elem_int_list.c\
+			  ft_size_intlist.c ft_add_elem_int_list.c\
 			  ft_bubble_sort_int_list.c ft_dell_elem_int_list.c\
 			  ft_dell_index_int_list.c ft_tab_to_int_list.c\
 			  ft_mergesort_int_list.c ft_med_int_list.c\
@@ -101,7 +101,7 @@ SRCS_TAB	= $(addprefix $(DIR_TAB)/, $(SRC_TAB))
 DIR_CHARLST	= src/charlist/
 SRC_CHARLST	= ft_add_charlist.c ft_dell_charlist.c ft_dell_list_charlist.c\
 			  ft_new_charlist.c ft_put_charlist.c ft_isempty_charlist.c\
-			  ft_put_list_charlist.c
+			  ft_put_list_charlist.c ft_size_charlist.c
 SRCS_CHARLST	= $(addprefix $(DIR_CHARLST)/, $(SRC_CHARLST))
 
 INC_DIR		= inc/
