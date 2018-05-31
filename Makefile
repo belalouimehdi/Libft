@@ -6,7 +6,7 @@
 #    By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 21:48:22 by mbelalou          #+#    #+#              #
-#    Updated: 2018/05/30 19:23:02 by mbelalou         ###   ########.fr        #
+#    Updated: 2018/05/31 18:40:02 by mbelalou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,7 @@ SRC_INTLIST	= ft_add_bgn_int_list.c ft_add_end_int_list.c ft_avg_int_list.c\
 			  ft_mergesort_int_list.c ft_med_int_list.c\
 			  ft_get_index_min_int_list.c ft_get_index_max_int_list.c\
 			  ft_get_index_first_elem_bigger_intlist.c\
-			  ft_get_index_last_elem_bigger_intlist.c
+			  ft_get_index_last_elem_bigger_intlist.c ft_get_pivot.c
 SRCS_INTLIST= $(addprefix $(DIR_INTLIST)/, $(SRC_INTLIST))
 
 DIR_LST	= src/lst

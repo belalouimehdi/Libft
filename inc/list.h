@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/05 17:45:13 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/30 19:20:52 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/05/31 20:17:56 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,9 @@ int			ft_get_index_last_elem_bigger_intlist(const t_int_list *list,
 		const intmax_t val);
 int			ft_get_index_max_int_list(const t_int_list *list);
 int			ft_get_index_min_int_list(const t_int_list *list);
+
+BOOL		ft_get_pivot(t_int_list *list, int sizelist, intmax_t *ret,
+		int pres);
 
 intmax_t	*ft_int_list_to_int_tab(t_int_list *list);
 #endif
