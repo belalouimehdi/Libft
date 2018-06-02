@@ -6,7 +6,7 @@
 #    By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 21:48:22 by mbelalou          #+#    #+#              #
-#    Updated: 2018/05/04 12:45:52 by mbelalou         ###   ########.fr        #
+#    Updated: 2018/06/02 13:43:46 by mbelalou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,6 +65,8 @@ $(NAME)			: $(SRC) $(OBJS_DIR) $(OBJ)
 		@echo "$(YELLO)$(NAME) has been successfully created !$(BIP)$(WHITE)."
 
 $(OBJS_DIR)%.o	: %.c $(INC_DIR)
+		@echo "$< ... $(GREEN) compiled $(WHITE)"
+		@echo "\033[1A \033[2K \033[A"
 		@gcc $(FLAGES) $< -o $@ -I $(INC_DIR)
 
 $(OBJS_DIR)		:

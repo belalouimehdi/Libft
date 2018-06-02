@@ -1,41 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_add_elem_int_list.c                             :+:      :+:    :+:   */
+/*   ft_avg_intlist.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/21 15:16:23 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/06/01 13:29:48 by mbelalou         ###   ########.fr       */
+/*   Created: 2018/06/01 13:29:17 by mbelalou          #+#    #+#             */
+/*   Updated: 2018/06/01 13:29:20 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/list.h"
 
-BOOL	ft_add_elem_int_list(int index, intmax_t nbr, t_int_list **list)
+BOOL	ft_avg_intlist(const t_int_list *list, long double *avg)
 {
-	int			size;
-	int			cp;
-	t_int_list	*temp;
-	t_int_list	*head;
+	intmax_t size;
 
-	head = *list;
-	if (index == 0)
-	{
-		ft_add_bgn_intlist(nbr, list);
-		return (T);
-	}
-	size = ft_size_intlist(*list);
-	if (index > size)
+	if (!list)
 		return (F);
-	cp = -1;
-	while (++cp < index)
+	size = 0;
+	*avg = 0;
+	while (list)
 	{
-		temp = (*list);
-		(*list) = (*list)->next;
+		*avg += list->data;
+		list = list->next;
+		size++;
 	}
-	temp->next = ft_new_intlist(nbr);
-	(temp->next)->next = *list;
-	*list = head;
+	*avg /= size;
 	return (T);
 }

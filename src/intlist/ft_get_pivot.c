@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/31 18:39:19 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/31 18:39:48 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/06/02 13:54:48 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ BOOL	ft_get_pivot(t_int_list *list, int sizelist, intmax_t *ret, int pres)
 	sizelist  = sizelist * pres;
 	sizelist = sizelist / 100;
 	*ret = tab[sizelist];
-	free (tab);
+	free(tab);
 	return ((sizelist) ? 1 : 0);
 }

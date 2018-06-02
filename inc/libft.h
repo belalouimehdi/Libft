@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 17:52:06 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/28 15:44:12 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/06/02 14:17:58 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,13 +62,6 @@
 # include <wchar.h>
 # include <inttypes.h>
 # include "bool.h"
-
-typedef struct			s_int_list
-{
-	intmax_t			data;
-	struct s_int_list	*next;
-}						t_int_list;
-
 
 # include "char.h"
 # include "charlist.h"

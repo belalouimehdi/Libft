@@ -6,7 +6,7 @@
 #    By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 21:48:22 by mbelalou          #+#    #+#              #
-#    Updated: 2018/05/31 18:40:02 by mbelalou         ###   ########.fr        #
+#    Updated: 2018/06/02 13:58:25 by mbelalou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,24 +14,24 @@ NAME		= libft.a
 
 FLAGES		= -Wall -Wextra -Werror -c
 
-DIR_CHAR	= src/char
+DIR_CHAR	= char
 SRC_CHAR	= ft_chartoint.c ft_isascii.c ft_islower.c ft_putchar.c ft_toupper.c\
 			  ft_isalnum.c ft_isblank.c ft_isprint.c ft_putchar_fd.c\
 			  ft_isalpha.c ft_isdigit.c ft_isupper.c ft_tolower.c
 SRCS_CHAR	= $(addprefix $(DIR_CHAR)/, $(SRC_CHAR))
 
-DIR_FILE	= src/file/
+DIR_FILE	= file
 SRC_FILE	= ft_open_file.c get_next_line.c
 SRCS_FILE	= $(addprefix $(DIR_FILE)/, $(SRC_FILE))
 
-DIR_INTLIST	= src/intlist/
-SRC_INTLIST	= ft_add_bgn_int_list.c ft_add_end_int_list.c ft_avg_int_list.c\
-			  ft_clear_int_list.c ft_dell_bgn_int_list.c ft_dell_end_int_list.c\
+DIR_INTLIST	= intlist
+SRC_INTLIST	= ft_add_bgn_intlist.c ft_add_end_intlist.c ft_avg_intlist.c\
+			  ft_clear_intlist.c ft_dell_bgn_int_list.c ft_dell_end_int_list.c\
 			  ft_getnbr_found_elem_int_list.c ft_get_val_intlist.c\
 			  ft_intervert_head_int_list.c ft_intervert_head_tow_int_list.c\
 			  ft_is_empty_int_list.c ft_is_in_int_list.c\
 			  ft_is_sorted_asc_int_list.c ft_is_sorted_des_int_list.c\
-			  ft_max_int_list.c ft_min_int_list.c ft_new_int_list.c\
+			  ft_max_int_list.c ft_min_int_list.c ft_new_intlist.c\
 			  ft_push_first_to_list.c ft_put_int_list.c ft_put_tow_piles.c\
 			  ft_shift_bottom_int_list.c ft_shift_bottom_tow_int_list.c\
 			  ft_shift_top_int_list.c ft_shift_top_tow_int_list.c\
@@ -44,21 +44,21 @@ SRC_INTLIST	= ft_add_bgn_int_list.c ft_add_end_int_list.c ft_avg_int_list.c\
 			  ft_get_index_last_elem_bigger_intlist.c ft_get_pivot.c
 SRCS_INTLIST= $(addprefix $(DIR_INTLIST)/, $(SRC_INTLIST))
 
-DIR_LST	= src/lst
+DIR_LST		= lst
 SRC_LST		= ft_lstadd.c ft_lstdel.c ft_lstdelone.c ft_lstiter.c ft_lstmap.c\
 			  ft_lstnew.c
 SRCS_LST	= $(addprefix $(DIR_LST)/, $(SRC_LST))
 
-DIR_MAT	= src/mat
+DIR_MAT		= mat
 SRC_MAT		= ft_free_mat.c ft_matlen.c   ft_putmat.c ft_mat_to_str.c
 SRCS_MAT	= $(addprefix $(DIR_MAT)/, $(SRC_MAT))
 
-DIR_MEM	= src/mem
+DIR_MEM		= mem
 SRC_MEM		= ft_bzero.c ft_memccpy.c ft_memcmp.c ft_memdel.c ft_memset.c\
 			  ft_memalloc.c ft_memchr.c ft_memcpy.c ft_memmove.c
 SRCS_MEM	= $(addprefix $(DIR_MEM)/, $(SRC_MEM))
 
-DIR_NBR	= src/nbr
+DIR_NBR		= nbr
 SRC_NBR		= ft_abs.c ft_decimal_to_base_stat.c ft_max.c ft_atoi.c\
 			  ft_get_char_base.c ft_min.c ft_atoi_v1.c ft_get_len_value_base.c\
 			  ft_nbrlen.c ft_atoi_v2.c ft_get_len_value_ubase.c ft_putnbr.c\
@@ -68,7 +68,7 @@ SRC_NBR		= ft_abs.c ft_decimal_to_base_stat.c ft_max.c ft_atoi.c\
 			  ft_is_overflow_intmax.c ft_atointmax.c ft_swap_int.c
 SRCS_NBR	= $(addprefix $(DIR_NBR)/, $(SRC_NBR))
 
-DIR_STR	= src/str
+DIR_STR		= str
 SRC_STR		= ft_comptword.c ft_putendl_fd.c ft_strequ.c ft_strnequ.c\
 			  ft_fill_elem.c ft_putstr.c ft_striter.c ft_strnew.c\
 			  ft_getfirstindexword.c ft_putstr_fd.c ft_striteri.c\
@@ -83,22 +83,22 @@ SRC_STR		= ft_comptword.c ft_putendl_fd.c ft_strequ.c ft_strnequ.c\
 			  ft_strjoin_clean.c
 SRCS_STR	= $(addprefix $(DIR_STR)/, $(SRC_STR))
 
-DIR_SYS		= src/sys
+DIR_SYS		= sys
 SRC_SYS		= ft_temporize.c ft_clear_scr.c
 SRCS_SYS	= $(addprefix $(DIR_SYS)/, $(SRC_SYS))
 
-DIR_WCHAR	= src/wchar
+DIR_WCHAR	= wchar
 SRC_WCHAR	= ft_putwstr.c ft_wcharlen.c ft_wstrlen.c ft_wchar_to_string.c\
 			  ft_wstringlen.c
 SRCS_WCHAR	= $(addprefix $(DIR_WCHAR)/, $(SRC_WCHAR))
 
-DIR_TAB		= src/tab
+DIR_TAB		= tab
 SRC_TAB		= ft_put_intmax_tab.c ft_bubble_sort_tab.c ft_mergesort_tab.c\
 			  ft_int_list_to_tab.c ft_avg_tab.c ft_intmax_list_to_tab.c\
 			  ft_med_tab.c
 SRCS_TAB	= $(addprefix $(DIR_TAB)/, $(SRC_TAB))
 
-DIR_CHARLST	= src/charlist/
+DIR_CHARLST	= charlist
 SRC_CHARLST	= ft_add_charlist.c ft_dell_charlist.c ft_dell_list_charlist.c\
 			  ft_new_charlist.c ft_put_charlist.c ft_isempty_charlist.c\
 			  ft_put_list_charlist.c ft_size_charlist.c
@@ -118,15 +118,15 @@ SRC			= $(SRCS_CHAR) $(SRCS_FILE) $(SRCS_INTLIST) $(SRCS_LST) $(SRCS_MAT)\
 
 OBJ			= $(addprefix $(OBJS_DIR), $(SRC:.c=.o))
 
-RED		= \033[31m
+RED			= \033[31m
 GREEN		= \033[32m
 YELLO		= \033[33m
 WHITE		= \033[37m
-BIP		= \a
+BIP			= \a
 
 all				: $(NAME)
 
-$(NAME)			: $(PRINTF) $(SRC) $(OBJS_DIR) $(OBJ)
+$(NAME)			: $(PRINTF) $(OBJS_DIR) $(OBJ)
 		@ar rc $(NAME) $(OBJ)
 		@ranlib $(NAME)
 		@echo "$(GREEN)$(NAME) has been successfully created !$(WHITE)."
@@ -136,9 +136,11 @@ $(PRINTF)		:
 		@make -C $(PRINTF_DIR)
 		@cp $(PRINTF_DIR)/$(PRINTF) ./$(NAME)
 
-$(OBJS_DIR)%.o	: %.c $(INC_DIR)
+$(OBJS_DIR)%.o	: ./src/%.c $(INC_DIR)
+		@echo "$< ... $(GREEN) compiled $(WHITE)"
 		@gcc $(FLAGES) $< -o $@ -I $(INC_DIR)
-		@echo "$< compiling"
+		@echo "\033[1A \033[2K \033[A"
+
 $(OBJS_DIR)		:
 		@mkdir -p $(OBJS_DIR);
 		@mkdir -p $(OBJS_DIR)/$(DIR_CHARLST);
