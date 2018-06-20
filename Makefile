@@ -6,7 +6,7 @@
 #    By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 21:48:22 by mbelalou          #+#    #+#              #
-#    Updated: 2018/06/05 12:45:00 by mbelalou         ###   ########.fr        #
+#    Updated: 2018/06/20 12:48:07 by mbelalou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,20 +26,20 @@ SRCS_FILE	= $(addprefix $(DIR_FILE)/, $(SRC_FILE))
 
 DIR_INTLIST	= intlist
 SRC_INTLIST	= ft_add_bgn_intlist.c ft_add_end_intlist.c ft_avg_intlist.c\
-			  ft_clear_intlist.c ft_dell_bgn_int_list.c ft_dell_end_int_list.c\
-			  ft_getnbr_found_elem_int_list.c ft_get_val_intlist.c\
-			  ft_intervert_head_int_list.c ft_intervert_head_tow_int_list.c\
-			  ft_is_empty_int_list.c ft_is_in_int_list.c\
-			  ft_is_sorted_asc_int_list.c ft_is_sorted_des_int_list.c\
-			  ft_max_int_list.c ft_min_int_list.c ft_new_intlist.c\
-			  ft_push_first_to_list.c ft_put_int_list.c ft_put_tow_piles.c\
-			  ft_shift_bottom_int_list.c ft_shift_bottom_tow_int_list.c\
-			  ft_shift_top_int_list.c ft_shift_top_tow_int_list.c\
-			  ft_size_intlist.c ft_add_elem_int_list.c\
-			  ft_bubble_sort_int_list.c ft_dell_elem_int_list.c\
-			  ft_dell_index_int_list.c ft_tab_to_int_list.c\
-			  ft_mergesort_int_list.c ft_med_int_list.c\
-			  ft_get_index_min_int_list.c ft_get_index_max_int_list.c\
+			  ft_clear_intlist.c ft_dell_bgn_intlist.c ft_dell_end_intlist.c\
+			  ft_get_nbr_found_elem_intlist.c ft_get_val_intlist.c\
+			  ft_intervert_head_intlist.c ft_intervert_head_tow_intlist.c\
+			  ft_is_empty_intlist.c ft_is_in_intlist.c\
+			  ft_is_sorted_asc_intlist.c ft_is_sorted_des_intlist.c\
+			  ft_max_intlist.c ft_min_intlist.c ft_new_intlist.c\
+			  ft_push_first_to_list.c ft_put_intlist.c ft_put_tow_piles.c\
+			  ft_shift_bottom_intlist.c ft_shift_bottom_tow_intlist.c\
+			  ft_shift_top_intlist.c ft_shift_top_tow_intlist.c\
+			  ft_size_intlist.c ft_add_elem_intlist.c\
+			  ft_bubble_sort_intlist.c ft_dell_elem_intlist.c\
+			  ft_dell_index_intlist.c ft_tab_to_intlist.c\
+			  ft_mergesort_intlist.c ft_med_intlist.c\
+			  ft_get_index_min_intlist.c ft_get_index_max_intlist.c\
 			  ft_get_index_first_elem_bigger_intlist.c\
 			  ft_get_index_last_elem_bigger_intlist.c ft_get_pivot.c
 SRCS_INTLIST= $(addprefix $(DIR_INTLIST)/, $(SRC_INTLIST))
@@ -65,7 +65,8 @@ SRC_NBR		= ft_abs.c ft_decimal_to_base_stat.c ft_max.c ft_atoi.c\
 			  ft_base_to_decimal.c ft_get_mask.c ft_putnbr_fd.c\
 			  ft_base_to_decimal_v2.c ft_intochar.c ft_udecimal_to_base_stat.c\
 			  ft_decimal_to_base_dynm.c ft_is_elem_base.c ft_unbrlen.c\
-			  ft_is_overflow_intmax.c ft_atointmax.c ft_swap_int.c
+			  ft_is_overflow_intmax.c ft_atointmax.c ft_swap_int.c\
+			  ft_isnumerique.c
 SRCS_NBR	= $(addprefix $(DIR_NBR)/, $(SRC_NBR))
 
 DIR_STR		= str
@@ -98,6 +99,22 @@ SRC_TAB		= ft_put_intmax_tab.c ft_bubble_sort_tab.c ft_mergesort_tab.c\
 			  ft_med_tab.c
 SRCS_TAB	= $(addprefix $(DIR_TAB)/, $(SRC_TAB))
 
+DIR_NODE	= node
+SRC_NODE	= ft_dell_node.c ft_new_node.c  ft_put_node.c
+SRCS_NODE	= $(addprefix $(DIR_NODE)/, $(SRC_NODE))
+
+DIR_NODELST	= nodelist
+SRC_NODELST	= ft_add_end_list_nodelist.c ft_dell_bgn_nodelist.c\
+			  ft_new_nodelist.c ft_clear_list_nodelist.c\
+			  ft_is_empty_nodelist.c ft_put_list_nodelist.c\
+			  ft_is_coord_in_nodelist.c ft_is_name_in_nodelist.c\
+			  ft_get_id_node.c ft_add_neighbors.c ft_exist_node_nodelist.c\
+			  ft_size_nodelist.c ft_get_node_listnode.c ft_find_path_deep.c\
+			  ft_reste_status_listnode.c ft_get_father.c\
+			  ft_get_id_best_father.c ft_backtrack_path.c ft_find_path_width.c\
+			  ft_is_next_step_free.c ft_set_taken_room.c ft_set_room_free.c
+SRCS_NODELST= $(addprefix $(DIR_NODELST)/, $(SRC_NODELST))
+
 DIR_CHARLST	= charlist
 SRC_CHARLST	= ft_add_charlist.c ft_dell_charlist.c ft_dell_list_charlist.c\
 			  ft_new_charlist.c ft_put_charlist.c ft_isempty_charlist.c\
@@ -114,7 +131,7 @@ PRINTF		= libftprintf.a
 
 SRC			= $(SRCS_CHAR) $(SRCS_FILE) $(SRCS_INTLIST) $(SRCS_LST) $(SRCS_MAT)\
 			  $(SRCS_MEM) $(SRCS_NBR) $(SRCS_STR) $(SRCS_SYS) $(SRCS_WCHAR)\
-			  $(SRCS_TAB) $(SRCS_CHARLST)
+			  $(SRCS_TAB) $(SRCS_CHARLST) $(SRCS_NODE) $(SRCS_NODELST)
 
 OBJ			= $(addprefix $(OBJS_DIR), $(SRC:.c=.o))
 
@@ -130,7 +147,7 @@ $(NAME)			: $(PRINTF) $(OBJS_DIR) $(OBJ)
 		@ar rc $(NAME) $(OBJ)
 		@ranlib $(NAME)
 		@echo "$(GREEN)$(NAME) has been successfully created !$(WHITE)."
-		@say "librery has been successfully created !"
+#		@#say "librery has been successfully created !"
 
 $(PRINTF)		:
 		@make -C $(PRINTF_DIR)
@@ -150,6 +167,8 @@ $(OBJS_DIR)		:
 		@mkdir -p $(OBJS_DIR)/$(DIR_LST);
 		@mkdir -p $(OBJS_DIR)/$(DIR_MAT);
 		@mkdir -p $(OBJS_DIR)/$(DIR_MEM);
+		@mkdir -p $(OBJS_DIR)/$(DIR_NODE);
+		@mkdir -p $(OBJS_DIR)/$(DIR_NODELST);
 		@mkdir -p $(OBJS_DIR)/$(DIR_NBR);
 		@mkdir -p $(OBJS_DIR)/$(DIR_STR);
 		@mkdir -p $(OBJS_DIR)/$(DIR_TAB);
@@ -160,7 +179,7 @@ clean			:
 		@make -C $(PRINTF_DIR) clean
 		@rm -fr $(OBJS_DIR)
 		@echo "$(RED)cleaned the libft binary file$(WHITE)."
-		@say "cleaned the librery binary files."
+#		@#say "cleaned the librery binary files."
 
 fclean			:
 		@make -C $(PRINTF_DIR) fclean
@@ -168,7 +187,7 @@ fclean			:
 		@rm -f $(NAME)
 		@echo "$(RED)cleaned the $(NAME) file$(WHITE)."
 		@echo "$(GREEN)the $(NAME) directory is totaly cleaned !!$(WHITE)."
-		@say "the librery directory is totaly cleaned !"
+#		@#say "the librery directory is totaly cleaned !"
 
 re				: fclean all
 

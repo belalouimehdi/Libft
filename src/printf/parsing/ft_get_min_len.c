@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/21 18:03:16 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/05/03 16:36:38 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/06/20 12:02:23 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ static int	get_min_len_s(char *str, int pt, t_format *format)
 
 static int	get_min_len_n(char *str, int pt, t_format *format, va_list *ap)
 {
-	if (format->min_length == -2 &&
-			format->is_there_min_length && ft_isdigit(str[pt]))
+	if (format->min_length == -2
+			&& format->is_there_min_length && ft_isdigit(str[pt]))
 		va_arg(*ap, int);
 	if (ft_isdigit(str[pt]))
 	{
