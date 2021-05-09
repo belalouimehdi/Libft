@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/list.h"
+#include "list.h"
 
 BOOL	ft_add_end_intlist(intmax_t nbr, t_int_list **list)
 {

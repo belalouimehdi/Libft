@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/nodelist.h"
+#include "nodelist.h"
 
 t_int_list	*ft_backtrack_path(t_nodelist *listnode, int id_end, int id_start)
 {

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/nbr.h"
+#include "nbr.h"
 
 static char		*get_result(intmax_t nbr, int base, char *elem_base, int size)
 {

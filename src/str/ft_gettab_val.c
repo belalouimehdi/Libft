@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/str.h"
+#include "str.h"
 
 char	ft_gettab_val(const char *tab, const int index)
 {

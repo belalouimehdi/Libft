@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/nbr.h"
+#include "nbr.h"
 
 BOOL	ft_is_overflow_intmax(char *param)
 {

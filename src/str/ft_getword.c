@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/str.h"
+#include "str.h"
 
 char	*ft_getword(const char *str, const int idword, const char separator)
 {

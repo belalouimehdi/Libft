@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/nbr.h"
+#include "nbr.h"
 
 int		ft_get_char_base(const char nbr)
 {

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/nodelist.h"
+#include "nodelist.h"
 
 int		ft_get_id_node(char *node_name, t_nodelist *listnode)
 {

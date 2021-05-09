@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/nodelist.h"
+#include "nodelist.h"
 
 void	ft_set_taken_room(int id_room, t_nodelist *listants)
 {

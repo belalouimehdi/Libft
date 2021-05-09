@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/list.h"
+#include "list.h"
 
 BOOL	ft_is_in_intlist(const intmax_t e, const t_int_list *list)
 {

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/list.h"
+#include "list.h"
 
 void	ft_put_intlist(const t_int_list *list)
 {

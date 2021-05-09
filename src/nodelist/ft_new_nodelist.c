@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/nodelist.h"
+#include "nodelist.h"
 
 /*
 **   ne peut etre remplacer par new_node(); pas la meme chose

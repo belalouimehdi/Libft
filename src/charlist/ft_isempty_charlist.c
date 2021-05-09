@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/charlist.h"
+#include "charlist.h"
 
 BOOL	ft_isempty_charlist(t_charlist *list)
 {

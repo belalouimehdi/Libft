@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/mem.h"
+#include "mem.h"
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t max_size)
 {

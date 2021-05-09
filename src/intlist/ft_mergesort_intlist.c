@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/tab.h"
+#include "tab.h"
 
 void	ft_mergesort_intlist(t_int_list **list, int size)
 {

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/nodelist.h"
+#include "nodelist.h"
 
 int		ft_size_nodelist(t_nodelist *listnode)
 {

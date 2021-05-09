@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/lst.h"
+#include "lst.h"
 
 t_list	*ft_lstnew(const void *src, size_t size)
 {

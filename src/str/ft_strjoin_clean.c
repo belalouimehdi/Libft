@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/str.h"
+#include "str.h"
 
 static void	clear(char **str1, char **str2, int del)
 {

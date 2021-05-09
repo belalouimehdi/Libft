@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/nbr.h"
+#include "nbr.h"
 
 intmax_t	ft_base_to_decimal_v2(const char *str, const int str_base)
 {

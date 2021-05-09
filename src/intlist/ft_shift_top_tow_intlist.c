@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/list.h"
+#include "list.h"
 
 BOOL	ft_shift_top_tow_int_list(t_int_list **list_a, t_int_list **list_b)
 {

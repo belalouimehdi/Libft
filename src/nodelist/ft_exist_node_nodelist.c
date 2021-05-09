@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/nodelist.h"
+#include "nodelist.h"
 
 BOOL	ft_exist_node_nodelist(t_node *node, t_nodelist *listnodes)
 {

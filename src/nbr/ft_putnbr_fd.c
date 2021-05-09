@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/nbr.h"
+#include "nbr.h"
 
 static	void	ecrire_nb_fd(intmax_t nbr, int fd)
 {

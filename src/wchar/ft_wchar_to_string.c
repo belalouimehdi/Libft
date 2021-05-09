@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/wchar.h"
+#include "wchar.h"
 
 static char	*convert_delta_char_to_string(const wchar_t c, char *ret)
 {

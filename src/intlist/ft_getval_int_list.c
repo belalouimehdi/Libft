@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/list.h"
+#include "list.h"
 
 BOOL	ft_getval_int_list(const t_int_list *list, const size_t index,
 		intmax_t *data)

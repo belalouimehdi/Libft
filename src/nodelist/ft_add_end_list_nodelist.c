@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/nodelist.h"
+#include "nodelist.h"
 
 BOOL	ft_add_end_list_nodelist(t_node *node, t_nodelist **list)
 {

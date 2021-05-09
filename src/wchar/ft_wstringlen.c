@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/wchar.h"
+#include "wchar.h"
 
 size_t		ft_wstringlen(const wchar_t *str)
 {

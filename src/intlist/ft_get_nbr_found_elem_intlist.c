@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/list.h"
+#include "list.h"
 
 int		ft_get_nbr_found_elem_intlist(const intmax_t e, const t_int_list *list)
 {

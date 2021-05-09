@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/tab.h"
+#include "tab.h"
 
 /*
 **void	merge_tab_d(intmax_t *tab,  int mid, int size)

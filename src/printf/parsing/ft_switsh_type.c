@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../inc/printf.h"
+#include "printf.h"
 
 static void	manage_priority_flag(t_format *format, va_list *ap)
 {

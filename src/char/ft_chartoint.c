@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/char.h"
+#include "char.h"
 
 int		ft_chartoint(const char c)
 {

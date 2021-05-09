@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/tab.h"
+#include "tab.h"
 
 void	ft_int_list_to_tab(intmax_t **dest, t_int_list *src, int size)
 {

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../inc/color.h"
+#include "color.h"
 
 void	ft_inittabcolor(char **colors)
 {

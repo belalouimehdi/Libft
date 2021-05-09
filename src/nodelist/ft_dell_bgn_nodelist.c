@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/nodelist.h"
+#include "nodelist.h"
 
 BOOL	ft_dell_bgn_nodelist(t_nodelist **list)
 {

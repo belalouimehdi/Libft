@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../inc/printf.h"
+#include "printf.h"
 
 int		ft_is_convertion_type(char c)
 {

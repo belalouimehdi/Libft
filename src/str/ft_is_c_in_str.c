@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/str.h"
+#include "str.h"
 
 BOOL		ft_is_c_in_str(const char c, const char *str)
 {

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../inc/printf.h"
+#include "printf.h"
 
 static int	get_min_len_s(char *str, int pt, t_format *format)
 {

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/list.h"
+#include "list.h"
 
 BOOL	ft_get_pivot(t_int_list *list, int sizelist, intmax_t *ret, int pres)
 {

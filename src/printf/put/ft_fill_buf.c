@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../inc/printf.h"
+#include "printf.h"
 
 int		ft_fill_buf(intmax_t max_print, char print)
 {

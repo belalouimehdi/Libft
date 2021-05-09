@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/nodelist.h"
+#include "nodelist.h"
 
 void	ft_add_neighbors(t_nodelist *listnode, char *node_name, char *neighbor)
 {

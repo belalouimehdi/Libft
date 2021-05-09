@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/nodelist.h"
+#include "nodelist.h"
 
 t_int_list		*ft_get_father(int id_end, t_nodelist *listnode)
 {

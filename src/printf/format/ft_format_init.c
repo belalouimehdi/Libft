@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../inc/printf.h"
+#include "printf.h"
 
 void	ft_format_init(t_format *format)
 {

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/file.h"
+#include "file.h"
 
 static	t_list_fd	*new_buf_fd(int fd)
 {

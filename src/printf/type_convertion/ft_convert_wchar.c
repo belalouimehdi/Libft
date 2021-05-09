@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../inc/printf.h"
+#include "printf.h"
 
 static void		ft_generat_ret(t_format *format, char *str, wchar_t val)
 {

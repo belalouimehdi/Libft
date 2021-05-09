@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../inc/printf.h"
+#include "printf.h"
 
 static void		put_base(t_format *format, int shift, int size_ret, char *str)
 {

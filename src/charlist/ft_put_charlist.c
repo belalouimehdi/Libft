@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/charlist.h"
+#include "charlist.h"
 
 void	ft_put_charlist(t_charlist *list)
 {

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/nbr.h"
+#include "nbr.h"
 
 intmax_t		ft_min(const intmax_t a, const intmax_t b)
 {

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/nodelist.h"
+#include "nodelist.h"
 
 BOOL		ft_find_path_deep(t_nodelist *listnodes, t_node *node, t_node *end,
 		t_int_list **path)

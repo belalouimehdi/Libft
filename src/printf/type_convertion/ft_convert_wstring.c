@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../inc/printf.h"
+#include "printf.h"
 
 static void		generat_wstring(t_format *format, wchar_t *wstr,
 		int char_putted)
