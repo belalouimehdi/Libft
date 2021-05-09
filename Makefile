@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: mbelalou <mbelalou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 21:48:22 by mbelalou          #+#    #+#              #
-#    Updated: 2018/06/20 12:48:07 by mbelalou         ###   ########.fr        #
+#    Updated: 2018/10/22 15:21:47 by mbelalou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,8 @@ SRC_CHAR	= ft_chartoint.c ft_isascii.c ft_islower.c ft_putchar.c ft_toupper.c\
 SRCS_CHAR	= $(addprefix $(DIR_CHAR)/, $(SRC_CHAR))
 
 DIR_FILE	= file
-SRC_FILE	= ft_open_file.c get_next_line.c
+SRC_FILE	= ft_open_r_file.c get_next_line.c ft_read_fd_file.c\
+			  ft_read_url_file.c
 SRCS_FILE	= $(addprefix $(DIR_FILE)/, $(SRC_FILE))
 
 DIR_INTLIST	= intlist
@@ -41,7 +42,8 @@ SRC_INTLIST	= ft_add_bgn_intlist.c ft_add_end_intlist.c ft_avg_intlist.c\
 			  ft_mergesort_intlist.c ft_med_intlist.c\
 			  ft_get_index_min_intlist.c ft_get_index_max_intlist.c\
 			  ft_get_index_first_elem_bigger_intlist.c\
-			  ft_get_index_last_elem_bigger_intlist.c ft_get_pivot.c
+			  ft_get_index_last_elem_bigger_intlist.c ft_get_pivot.c\
+			  ft_cp_list_intlist.c ft_put_hex_intlist.c
 SRCS_INTLIST= $(addprefix $(DIR_INTLIST)/, $(SRC_INTLIST))
 
 DIR_LST		= lst
@@ -66,7 +68,8 @@ SRC_NBR		= ft_abs.c ft_decimal_to_base_stat.c ft_max.c ft_atoi.c\
 			  ft_base_to_decimal_v2.c ft_intochar.c ft_udecimal_to_base_stat.c\
 			  ft_decimal_to_base_dynm.c ft_is_elem_base.c ft_unbrlen.c\
 			  ft_is_overflow_intmax.c ft_atointmax.c ft_swap_int.c\
-			  ft_isnumerique.c
+			  ft_isnumerique.c ft_byts_to_int.c ft_int_to_byts.c\
+			  ft_atoi_v3.c ft_base_to_decimal_v3.c ft_put_oct.c
 SRCS_NBR	= $(addprefix $(DIR_NBR)/, $(SRC_NBR))
 
 DIR_STR		= str
@@ -81,7 +84,8 @@ SRC_STR		= ft_comptword.c ft_putendl_fd.c ft_strequ.c ft_strnequ.c\
 			  ft_strcut.c ft_strmapi.c ft_strtrim.c ft_itoa.c ft_strdel.c\
 			  ft_strncat.c ft_strupper.c ft_put_buf.c ft_strdup.c ft_strncmp.c\
 			  ft_putendl.c ft_strdup_stat.c ft_strncpy.c ft_format_str.c\
-			  ft_strjoin_clean.c
+			  ft_strjoin_clean.c ft_extract_options.c ft_get_c_in_str.c\
+			  ft_strjoin_sep.c ft_replace_char_in_str.c ft_u_str_to_str.c
 SRCS_STR	= $(addprefix $(DIR_STR)/, $(SRC_STR))
 
 DIR_SYS		= sys
@@ -96,7 +100,7 @@ SRCS_WCHAR	= $(addprefix $(DIR_WCHAR)/, $(SRC_WCHAR))
 DIR_TAB		= tab
 SRC_TAB		= ft_put_intmax_tab.c ft_bubble_sort_tab.c ft_mergesort_tab.c\
 			  ft_int_list_to_tab.c ft_avg_tab.c ft_intmax_list_to_tab.c\
-			  ft_med_tab.c
+			  ft_med_tab.c ft_somme_tab.c
 SRCS_TAB	= $(addprefix $(DIR_TAB)/, $(SRC_TAB))
 
 DIR_NODE	= node
@@ -115,10 +119,17 @@ SRC_NODELST	= ft_add_end_list_nodelist.c ft_dell_bgn_nodelist.c\
 			  ft_is_next_step_free.c ft_set_taken_room.c ft_set_room_free.c
 SRCS_NODELST= $(addprefix $(DIR_NODELST)/, $(SRC_NODELST))
 
+DIR_ERROR	= error
+SRC_ERROR	= ft_error_exe.c
+SRCS_ERROR	= $(addprefix $(DIR_ERROR)/, $(SRC_ERROR))
+
 DIR_CHARLST	= charlist
 SRC_CHARLST	= ft_add_charlist.c ft_dell_charlist.c ft_dell_list_charlist.c\
 			  ft_new_charlist.c ft_put_charlist.c ft_isempty_charlist.c\
-			  ft_put_list_charlist.c ft_size_charlist.c
+			  ft_put_list_charlist.c ft_size_charlist.c ft_cp_list_charlist.c\
+			  ft_cut_add_charlist.c ft_charlist_to_str.c ft_str_to_charlist.c\
+			  ft_charlist_to_format_str.c ft_str_to_format_charlist.c\
+			  ft_mat_to_charlist.c ft_put_list_charlist_join.c  
 SRCS_CHARLST	= $(addprefix $(DIR_CHARLST)/, $(SRC_CHARLST))
 
 INC_DIR		= inc/
@@ -129,10 +140,10 @@ PRINTF_DIR	= src/printf
 
 PRINTF		= libftprintf.a
 
-SRC			= $(SRCS_CHAR) $(SRCS_FILE) $(SRCS_INTLIST) $(SRCS_LST) $(SRCS_MAT)\
-			  $(SRCS_MEM) $(SRCS_NBR) $(SRCS_STR) $(SRCS_SYS) $(SRCS_WCHAR)\
-			  $(SRCS_TAB) $(SRCS_CHARLST) $(SRCS_NODE) $(SRCS_NODELST)
-
+SRC			= $(SRCS_CHAR) $(SRCS_FILE) $(SRCS_ERROR) $(SRCS_INTLIST)\
+			  $(SRCS_LST) $(SRCS_MAT) $(SRCS_MEM) $(SRCS_NBR) $(SRCS_STR)\
+			  $(SRCS_SYS) $(SRCS_WCHAR) $(SRCS_TAB) $(SRCS_CHARLST)\
+			  $(SRCS_NODE) $(SRCS_NODELST)
 OBJ			= $(addprefix $(OBJS_DIR), $(SRC:.c=.o))
 
 RED			= \033[31m
@@ -162,6 +173,7 @@ $(OBJS_DIR)		:
 		@mkdir -p $(OBJS_DIR);
 		@mkdir -p $(OBJS_DIR)/$(DIR_CHARLST);
 		@mkdir -p $(OBJS_DIR)/$(DIR_CHAR);
+		@mkdir -p $(OBJS_DIR)/$(DIR_ERROR);
 		@mkdir -p $(OBJS_DIR)/$(DIR_FILE);
 		@mkdir -p $(OBJS_DIR)/$(DIR_INTLIST);
 		@mkdir -p $(OBJS_DIR)/$(DIR_LST);
@@ -192,7 +204,7 @@ fclean			:
 re				: fclean all
 
 norm 			:
-	@norminette | grep -B 1 "Error"
+	@norminette **/**.[ch] | grep -B 1 "Error"
 
 t				:
 	@make

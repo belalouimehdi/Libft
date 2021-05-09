@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mbelalou <mbelalou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 17:52:06 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/06/15 13:58:37 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/10/11 10:28:32 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,9 @@
 
 # define SIZE_TAB_CONV	 128
 
+# define STD_OUT        1
+# define STD_IN         0
+
 # include <stdlib.h>
 # include <string.h>
 # include <sys/types.h>
@@ -66,6 +69,7 @@
 # include "char.h"
 # include "charlist.h"
 # include "color.h"
+# include "error.h"
 # include "file.h"
 # include "list.h"
 # include "lst.h"

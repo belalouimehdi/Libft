@@ -6,7 +6,7 @@
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/03 12:05:02 by mbelalou          #+#    #+#             */
-/*   Updated: 2018/06/14 12:36:06 by mbelalou         ###   ########.fr       */
+/*   Updated: 2018/09/26 14:47:47 by mbelalou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 # define STR_H
 
 # include "libft.h"
+
+# define FIRST		1
+# define SECOND		2
+# define BOTH		3
 
 typedef struct	s_show
 {
@@ -32,6 +36,7 @@ intmax_t		ft_gettab_index(const char *tab, const char val);
 char			ft_gettab_val(const char *tab, const int index);
 char			*ft_getword(const char *s, const int idword,
 		const char separator);
+int				ft_get_c_in_str(const char *str, const char c);
 BOOL			ft_is_c_in_str(const char c, const char *str);
 BOOL			ft_isempty(const char *str);
 char			*ft_itoa(int nbr);
@@ -54,7 +59,9 @@ int				ft_strequ(const char *str1, const char *str2);
 void			ft_striter(char *str, void (*f)(char *));
 void			ft_striteri(char *str, void(*f)(unsigned int, char *));
 char			*ft_strjoin(const char *str1, const char *str2);
-char			*ft_strjoin_clear(char *str1, char *str2, int del);
+char			*ft_strjoin_sep(char const *str1, char const *str2,
+		const char c);
+char			*ft_strjoin_clear(char **str1, char **str2, int del);
 size_t			ft_strlcat(char *dest, const char *src, size_t size_dest);
 size_t			ft_strlen(const char *str);
 char			*ft_strlower(const char *str);
@@ -73,5 +80,13 @@ char			*ft_strstr(const char *ha, const char *ne);
 char			*ft_strsub(const char *str, unsigned int start, size_t len);
 char			*ft_strtrim(const char *str);
 char			*ft_strupper(const char *str);
+char			*ft_replace_char_in_str(char *str, char rep, char repwith);
 
+char			*ft_u_str_to_str(unsigned char str[4]);
+
+/*
+** remove this fonction
+**int		ft_extract_options(char *param, unsigned long *op,
+**		BOOL is_option(char), void set_options(char, unsigned long *));
+*/
 #endif
