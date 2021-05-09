@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../inc/color.h"
+#include "color.h"
 
 int		is_there_color(const char *s1, const char *s2, size_t n)
 {

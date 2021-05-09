@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/tab.h"
+#include "tab.h"
 
 void	ft_put_intmax_tab(intmax_t *tab, size_t size)
 {

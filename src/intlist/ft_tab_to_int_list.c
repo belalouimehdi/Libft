@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/list.h"
+#include "list.h"
 
 t_int_list	*ft_tab_to_int_list(intmax_t *tab, size_t size)
 {

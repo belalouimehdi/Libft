@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/nbr.h"
+#include "nbr.h"
 
 void			ft_decimal_to_base_stat(char *tab_ret, const intmax_t nbr,
 		const int base, const int form)

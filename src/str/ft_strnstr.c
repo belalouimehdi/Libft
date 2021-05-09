@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/str.h"
+#include "str.h"
 
 char	*ft_strnstr(const char *ha, const char *ne, size_t max_comp)
 {

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/mat.h"
+#include "mat.h"
 
 static char	*mat_to_str(char **argv, int start)
 {

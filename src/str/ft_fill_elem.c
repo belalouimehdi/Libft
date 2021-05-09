@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/str.h"
+#include "str.h"
 
 int		ft_fill_elem(int len, char *bit, char *temp_tab, int lim)
 {

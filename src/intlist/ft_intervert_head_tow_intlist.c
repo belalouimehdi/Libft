@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/libft.h"
+#include "libft.h"
 
 BOOL	ft_intervert_head_tow_intlist(t_int_list **list_a, t_int_list **list_b)
 {

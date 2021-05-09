@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/str.h"
+#include "str.h"
 
 int	ft_getfirstindexword(const char *str, const int idword, const char c)
 {

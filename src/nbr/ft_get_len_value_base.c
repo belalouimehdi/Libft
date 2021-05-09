@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/nbr.h"
+#include "nbr.h"
 
 int		ft_get_len_value_base(const intmax_t nbr, const int exit_base)
 {

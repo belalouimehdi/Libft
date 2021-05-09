@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/nodelist.h"
+#include "nodelist.h"
 
 BOOL	ft_is_next_step_free(int pos, t_int_list *path, t_nodelist *listnode,
 		int id_end)

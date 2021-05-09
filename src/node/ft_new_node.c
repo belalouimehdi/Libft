@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/node.h"
+#include "node.h"
 
 t_node		*ft_new_node(int id, char *name, intmax_t x, intmax_t y)
 {

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/nodelist.h"
+#include "nodelist.h"
 
 intmax_t	ft_get_id_best_father(t_int_list *list_fathers,
 		t_nodelist *listnode)

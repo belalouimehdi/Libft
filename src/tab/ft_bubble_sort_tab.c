@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/tab.h"
+#include "tab.h"
 
 void	ft_bubble_sort_tab(intmax_t *tab, size_t size)
 {

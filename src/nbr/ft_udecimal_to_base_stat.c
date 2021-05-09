@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/nbr.h"
+#include "nbr.h"
 
 /*
 ** ft_printf("len %d   ret %d ",tab_ret,  len_ret, size_nbr_ret);

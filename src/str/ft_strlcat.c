@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/str.h"
+#include "str.h"
 
 size_t		ft_strlcat(char *dest, const char *src, size_t size_dest)
 {

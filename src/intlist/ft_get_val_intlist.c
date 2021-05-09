@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/list.h"
+#include "list.h"
 
 /*
 **    input  ->    const list,  index of elem, pointer of intmax_t to retu data

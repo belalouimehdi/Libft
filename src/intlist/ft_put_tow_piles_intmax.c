@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/list.h"
+#include "list.h"
 
 static void	put_piles(t_int_list *l_a, t_int_list *l_b, int size_la,
 		int size_lb)

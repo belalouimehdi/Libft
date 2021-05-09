@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/printf.h"
+#include "printf.h"
 
 static void	run(char *str, va_list *ap)
 {

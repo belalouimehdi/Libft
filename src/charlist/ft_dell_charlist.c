@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/charlist.h"
+#include "charlist.h"
 
 BOOL	ft_dell_charlist(t_charlist **to_free)
 {

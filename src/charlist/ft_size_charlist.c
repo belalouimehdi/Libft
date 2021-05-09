@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/charlist.h"
+#include "charlist.h"
 
 size_t		ft_size_charlist(const t_charlist *list)
 {

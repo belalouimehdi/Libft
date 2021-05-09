@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/char.h"
+#include "char.h"
 
 void	ft_putchar_fd(const char c, const int fd)
 {

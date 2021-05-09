@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../inc/printf.h"
+#include "printf.h"
 
 static int		manage_nbr_shift(uintmax_t nbr, t_format *frmt, int shift)
 {

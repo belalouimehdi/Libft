@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/nodelist.h"
+#include "nodelist.h"
 
 static BOOL	put_dist_node(t_nodelist *listnodes, t_node *node, t_node *end
 		, t_int_list **path)

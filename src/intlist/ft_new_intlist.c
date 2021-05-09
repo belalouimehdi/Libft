@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/list.h"
+#include "list.h"
 
 t_int_list		*ft_new_intlist(const intmax_t nbr)
 {

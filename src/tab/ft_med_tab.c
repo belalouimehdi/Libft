@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/tab.h"
+#include "tab.h"
 
 /*
 ** pas bien proteger vairdrait mieu paser par celle les intlist

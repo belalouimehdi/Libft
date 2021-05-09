@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/nodelist.h"
+#include "nodelist.h"
 
 t_node		*ft_get_node_listnode(t_nodelist *listnode, int id)
 {

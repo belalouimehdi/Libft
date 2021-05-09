@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/list.h"
+#include "list.h"
 
 /*
 ** pas besoin de faire le deplacement de pointeur il ce fait automatiquement

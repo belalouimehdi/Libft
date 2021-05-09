@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/nbr.h"
+#include "nbr.h"
 
 static int		extraire_nbt(unsigned char *str, unsigned long long nbr)
 {

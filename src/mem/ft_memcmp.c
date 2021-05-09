@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/mem.h"
+#include "mem.h"
 
 int		ft_memcmp(const void *str1, const void *str2, size_t size)
 {

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/str.h"
+#include "str.h"
 
 int		ft_strnequ(const char *str1, const char *str2, size_t max_comp)
 {
