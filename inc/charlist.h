@@ -37,7 +37,7 @@ BOOL					ft_cp_list_charlist(t_charlist *src, t_charlist **dest);
 BOOL					ft_cut_add_charlist(char *src, int start, int max_size,
 		t_charlist **dest);
 
-BOOL					ft_read_url_file(const char *url, t_charlist **file);
+BOOL					ft_read_path_file(const char *url, t_charlist **file);
 BOOL					ft_read_fd_file(const int fd, t_charlist **file);
 
 char					*ft_charlist_to_str(t_charlist *list, char c);

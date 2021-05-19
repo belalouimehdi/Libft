@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_read_url_file.c                                 :+:      :+:    :+:   */
+/*   ft_read_path_file.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbelalou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,9 +12,9 @@
 
 #include "charlist.h"
 
-BOOL	ft_read_url_file(const char *url, t_charlist **file)
+BOOL	ft_read_path_file(const char *path, t_charlist **file)
 {
-	if (!url || !file)
+	if (!path || !file)
 		return (F);
-	return (ft_read_fd_file(ft_open_r_file(url), file) ? T : F);
+	return (ft_read_fd_file(ft_open_r_file(path), file) ? T : F);
 }

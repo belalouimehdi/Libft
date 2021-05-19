@@ -22,7 +22,7 @@ SRCS_CHAR	= $(addprefix $(DIR_CHAR)/, $(SRC_CHAR))
 
 DIR_FILE	= file
 SRC_FILE	= ft_open_r_file.c get_next_line.c ft_read_fd_file.c\
-			  ft_read_url_file.c
+			  ft_read_path_file.c
 SRCS_FILE	= $(addprefix $(DIR_FILE)/, $(SRC_FILE))
 
 DIR_INTLIST	= intlist

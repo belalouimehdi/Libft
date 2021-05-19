@@ -17,7 +17,7 @@
 
 # define BUFF_SIZE	4096
 # define MAX_FD		4864
-# define ERROR_URL_FILE -1
+# define ERROR_path_file -1
 # define ERROR_FD       -2
 
 typedef struct			s_list_fd
@@ -27,7 +27,7 @@ typedef struct			s_list_fd
 	struct s_list_fd	*next;
 }						t_list_fd;
 
-int						ft_open_r_file(const char *url_file);
+int						ft_open_r_file(const char *path_file);
 int						get_next_line(const int fd, char **line);
-int						ft_open_r_iile(char *url_file);
+int						ft_open_r_iile(char *path_file);
 #endif

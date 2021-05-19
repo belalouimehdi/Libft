@@ -12,6 +12,23 @@
 
 #include "str.h"
 
+void	ft_comptword_help(void)
+{
+	ft_printf("\n\nft_comptword\n\n"
+	"\tUsage:\tft_comptword(const char *str, const char separator) ==> "
+	"return size_t\n\n"
+	"Description:\n\n"
+	"\tAllows to count the number of character sequences "
+	"separated by one or more separator.\n"
+	"\n\nExemple\n\n\n"
+	"\tchar *str\t\t= \"-c 3 -a -p /some/path --help -h\";\n"
+	"\tchar separator\t\t= '-';\n"
+	"\tint ret\t\t\t= ft_comptword(str, separator);\n\n"
+	"\tft_printf(\"You have %%d character sequences in your string.\",ret);\n\n\n" 
+	"\tOutput shell ==> You have a 5 character sequence in your string.\n\n\n" 
+	"Autor\t: Belaloui Mehdi\t mail\t: mehdi@belaloui.com\n\n");
+}
+
 size_t	ft_comptword(const char *str, const char separator)
 {
 	size_t	i;

@@ -12,13 +12,13 @@
 
 #include "file.h"
 
-int		ft_open_file(char *url_file)
+int		ft_open_file(char *path_file)
 {
 	int fd;
 
-	if (url_file == NULL)
+	if (path_file == NULL)
 		return (-1);
-	fd = open(url_file, O_RDONLY);
+	fd = open(path_file, O_RDONLY);
 	if (fd < 0)
 		return (-1);
 	return (fd);
